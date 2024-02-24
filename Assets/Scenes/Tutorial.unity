@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1163728180}
     m_Modifications:
+    - target: {fileID: 1537819903988679610, guid: 08de4273e55d10f45aa0f87c112ae27b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 367166446}
+    - target: {fileID: 1537819903988679610, guid: 08de4273e55d10f45aa0f87c112ae27b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 3258644404913037969, guid: 08de4273e55d10f45aa0f87c112ae27b, type: 3}
       propertyPath: m_Name
       value: WASDMOUSECanvas
@@ -238,6 +246,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7622029148275632218, guid: 08de4273e55d10f45aa0f87c112ae27b, type: 3}
   m_PrefabInstance: {fileID: 367166444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &367166446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3258644404913037969, guid: 08de4273e55d10f45aa0f87c112ae27b, type: 3}
+  m_PrefabInstance: {fileID: 367166444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &369513822 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7655786155840721251, guid: 0b5de3a912a085445a0d39bc8f102557, type: 3}
@@ -256,6 +269,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1163728180}
     m_Modifications:
+    - target: {fileID: 1634627293149952643, guid: 0b5de3a912a085445a0d39bc8f102557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 919374328}
+    - target: {fileID: 1634627293149952643, guid: 0b5de3a912a085445a0d39bc8f102557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 3369031174641867688, guid: 0b5de3a912a085445a0d39bc8f102557, type: 3}
       propertyPath: m_Name
       value: GrabOggettiCanvas
@@ -357,6 +378,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b5de3a912a085445a0d39bc8f102557, type: 3}
+--- !u!1 &919374328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3369031174641867688, guid: 0b5de3a912a085445a0d39bc8f102557, type: 3}
+  m_PrefabInstance: {fileID: 919374327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947784956
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +682,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1163728180}
     m_Modifications:
+    - target: {fileID: 387464767455637858, guid: 5da2a35ed6d11234bb536d43cd20d442, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1586754953}
+    - target: {fileID: 387464767455637858, guid: 5da2a35ed6d11234bb536d43cd20d442, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 4399706752703959113, guid: 5da2a35ed6d11234bb536d43cd20d442, type: 3}
       propertyPath: m_Name
       value: NPCDialogueCanvas
@@ -753,6 +787,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da2a35ed6d11234bb536d43cd20d442, type: 3}
+--- !u!1 &1586754953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4399706752703959113, guid: 5da2a35ed6d11234bb536d43cd20d442, type: 3}
+  m_PrefabInstance: {fileID: 1586754952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1760239395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -858,6 +897,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7250230243292124348, guid: b440493c279aa2241a448ef0c47f6ed0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1760239397}
+    - target: {fileID: 7250230243292124348, guid: b440493c279aa2241a448ef0c47f6ed0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -868,6 +915,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1732885097823715164, guid: b440493c279aa2241a448ef0c47f6ed0, type: 3}
   m_PrefabInstance: {fileID: 1760239395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1760239397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6697861044139341207, guid: b440493c279aa2241a448ef0c47f6ed0, type: 3}
+  m_PrefabInstance: {fileID: 1760239395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1894569195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -876,6 +928,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1163728180}
     m_Modifications:
+    - target: {fileID: 2296530894423795106, guid: 5cba0f6d746db2d44a8f049617900b8b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1894569197}
+    - target: {fileID: 2296530894423795106, guid: 5cba0f6d746db2d44a8f049617900b8b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 2859929191602029705, guid: 5cba0f6d746db2d44a8f049617900b8b, type: 3}
       propertyPath: m_Name
       value: InterazioneOggettiCanvas
@@ -983,6 +1043,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7156051036257783362, guid: 5cba0f6d746db2d44a8f049617900b8b, type: 3}
   m_PrefabInstance: {fileID: 1894569195}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1894569197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2859929191602029705, guid: 5cba0f6d746db2d44a8f049617900b8b, type: 3}
+  m_PrefabInstance: {fileID: 1894569195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2010007702 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8786805488966507138, guid: 5da2a35ed6d11234bb536d43cd20d442, type: 3}
@@ -996,6 +1061,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1163728180}
     m_Modifications:
+    - target: {fileID: 1461412358193190925, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7391642515530574962}
+    - target: {fileID: 1461412358193190925, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 3182235209896180006, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
       propertyPath: m_Name
       value: LuciCanvas
@@ -1089,6 +1162,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+--- !u!1 &7391642515530574962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182235209896180006, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+  m_PrefabInstance: {fileID: 7391642515530574961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

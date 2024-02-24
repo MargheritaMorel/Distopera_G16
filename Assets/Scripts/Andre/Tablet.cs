@@ -1,33 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Tablet : MonoBehaviour
 {
     [SerializeField] private GameObject _tablet;
-    [SerializeField] private Toggle _toggle;
+
+    [SerializeField] private Toggle _toggleTask1;
+    [SerializeField] private Toggle _toggleTask2;
+    [SerializeField] private Toggle _toggleTask3;
     [SerializeField] private TextMeshProUGUI _textTask1;
-    [SerializeField] private Image panelTask1;
     [SerializeField] private TextMeshProUGUI _textTask2;
-    [SerializeField] private Image panelTask2;
     [SerializeField] private TextMeshProUGUI _textTask3;
-    [SerializeField] private Toggle _toggle2;
+    [SerializeField] private TextMeshProUGUI _textTask4;
+
+    [SerializeField] private Image panelTask1;
+    [SerializeField] private Image panelTask2;
+     [SerializeField] private Image panelTask3;
+    
+
     [SerializeField] private Canvas _canvasTabletUI;
 
+
     [SerializeField] private Canvas _canvasTask1;
-
     [SerializeField] private Canvas _canvasTask2;
-
     [SerializeField] private Canvas _canvasTask3;
-
+    [SerializeField] private Canvas _canvasTask4;
 
 
     public bool isOpen = false;
     public bool isTaken = false;
     public float oggettoScenaPiazzato;
     public float luceAccesa;
+    public float vestitoVerificato;
     private float vestitoScelto;
     private bool oggettiCompleto = false;
     private bool luciAccese = false;
@@ -58,7 +66,7 @@ public class Tablet : MonoBehaviour
              _textTask1.text = "TASK SCENOGRAFIA COMPLETATO 4/4";
              panelTask1 = panelTask1.GetComponent<Image>();
              panelTask1.color = UnityEngine.Color.green;
-            _toggle.isOn = true;
+            _toggleTask1.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
         }
     }
@@ -92,13 +100,29 @@ public class Tablet : MonoBehaviour
             _textTask2.text = "TASK LUCI COMPLETATO 3/3";
              panelTask2 = panelTask2.GetComponent<Image>();
              panelTask2.color = UnityEngine.Color.green;
-            _toggle2.isOn = true;
+            _toggleTask2.isOn = true;
             _canvasTask3.gameObject.SetActive(true);
             _textTask3.gameObject.SetActive(true);
         }
 
         if (luceAccesa == 3) luciAccese = true;
     }
+
+    public void CheckVestiti(){
+        if(vestitoVerificato == 1){
+            _textTask3.text = "Task VESTITI 1/2";
+        }
+        if(vestitoVerificato == 2){
+            _textTask3.text = "TASK VESTITI COMPLETATO 2/2";
+             panelTask3 = panelTask3.GetComponent<Image>();
+             panelTask3.color = UnityEngine.Color.green;
+             _toggleTask3.isOn = true;
+            _canvasTask4.gameObject.SetActive(true);
+            _textTask4.gameObject.SetActive(true);
+        }
+
+    }
+    
     // Update is called once per frame
     void Update()
     {

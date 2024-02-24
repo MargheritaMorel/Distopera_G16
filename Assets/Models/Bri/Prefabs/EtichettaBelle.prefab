@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 4281138292789980251}
   - component: {fileID: 490259312929755283}
   - component: {fileID: 1574598521744264343}
+  - component: {fileID: 4817431056957703982}
   m_Layer: 5
   m_Name: EtichettaBelle
   m_TagString: Untagged
@@ -179,6 +180,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4817431056957703982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533805654058084406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b6af39ea1031b40965e269e05a38b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5141398706538289429
 GameObject:
   m_ObjectHideFlags: 0

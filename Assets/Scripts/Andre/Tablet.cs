@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TMPro;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Tablet : MonoBehaviour
 {
@@ -29,6 +31,10 @@ public class Tablet : MonoBehaviour
     [SerializeField] private Canvas _canvasTask2;
     [SerializeField] private Canvas _canvasTask3;
     [SerializeField] private Canvas _canvasTask4;
+
+    public UnityEvent task1Scompare;
+    public UnityEvent task2Scompare;
+    public UnityEvent task3Scompare;
 
 
     public bool isOpen = false;
@@ -68,6 +74,7 @@ public class Tablet : MonoBehaviour
              panelTask1.color = UnityEngine.Color.green;
             _toggleTask1.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
+            task1Scompare.Invoke();
         }
     }
 
@@ -103,6 +110,7 @@ public class Tablet : MonoBehaviour
             _toggleTask2.isOn = true;
             _canvasTask3.gameObject.SetActive(true);
             _textTask3.gameObject.SetActive(true);
+            task2Scompare.Invoke();
         }
 
         if (luceAccesa == 3) luciAccese = true;
@@ -119,6 +127,7 @@ public class Tablet : MonoBehaviour
              _toggleTask3.isOn = true;
             _canvasTask4.gameObject.SetActive(true);
             _textTask4.gameObject.SetActive(true);
+            task3Scompare.Invoke();
         }
 
     }

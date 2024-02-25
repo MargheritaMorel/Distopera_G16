@@ -12,7 +12,9 @@ public class Presa : MonoBehaviour
     [SerializeField] private GameObject _faro;
   
     public bool isClicked = false;
-    
+    [SerializeField] private bool accesa = true;
+    [SerializeField] private bool spenta = false;
+
     public UnityEvent evento;
     public UnityEvent evento1;
    
@@ -34,7 +36,7 @@ public class Presa : MonoBehaviour
        
         evento.Invoke();
             isClicked = true;
-            _faro.SetActive(true);
+            _faro.SetActive(spenta);
         }
         else
         {
@@ -42,7 +44,7 @@ public class Presa : MonoBehaviour
                 OnButtonClosed();
             evento1.Invoke();
             isClicked = false;
-            _faro.SetActive(false);
+            _faro.SetActive(accesa);
         }
 
 

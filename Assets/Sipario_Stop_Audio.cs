@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sipario_Audio : MonoBehaviour
+public class Sipario_Stop_Audio : MonoBehaviour
 {
    AudioSource aud;
    
@@ -11,8 +11,8 @@ public class Sipario_Audio : MonoBehaviour
     aud = GetComponent<AudioSource>();
   }
 
-   public void play_sound()
+   public void stop_sound()
    {
-    aud.Play();
+    aud.Stop();
    }
 }

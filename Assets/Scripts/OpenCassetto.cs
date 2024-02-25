@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class OpenCassetto : Interactable
 {
+    [SerializeField] AudioSource OpenDrawer;
+    [SerializeField] AudioSource CloseDrawer;
+
     private bool boxOpened;
     private bool coroutineAllowed;
     private Vector3 initialPosition;
@@ -42,6 +45,7 @@ public class OpenCassetto : Interactable
                     transform.localPosition.z);
                 yield return new WaitForSeconds(0f);
             }
+            OpenDrawer.Play();
             boxOpened = true;
         }
         else
@@ -54,6 +58,7 @@ public class OpenCassetto : Interactable
                 yield return new WaitForSeconds(0f);
             }
             transform.position = initialPosition;
+            CloseDrawer.Play();
             boxOpened = false;
         }
         coroutineAllowed = true;

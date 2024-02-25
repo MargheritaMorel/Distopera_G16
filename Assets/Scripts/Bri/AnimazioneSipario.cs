@@ -7,17 +7,7 @@ public class AnimazioneSipario : MonoBehaviour
 {
     public UnityEvent evento;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     public void SiparioAperto(){
         evento.Invoke();

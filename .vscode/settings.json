@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Distopera_G16.sln"
+    "dotnet.defaultSolution": "Distopera_G16.sln",
+    "FSharp.suggestGitignore": false
 }

@@ -13,11 +13,13 @@ public class DialogueManagerScript : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
-    [SerializeField] AudioSource TypingSound;
+
+ 
 
 
     void Start(){
         sentences = new Queue<string>();
+       
     }
 
     public void StartDialogue(Dialogue dialogue){
@@ -28,6 +30,7 @@ public class DialogueManagerScript : MonoBehaviour
 
         foreach(string sentence in dialogue.sentences){
             sentences.Enqueue(sentence);
+           
         }
 
         DisplayNextSentence();
@@ -48,7 +51,6 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
-            TypingSound.Play();
             yield return new WaitForSeconds(0.05f);
         }
     }

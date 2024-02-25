@@ -13,6 +13,8 @@ public class Vestiti : MonoBehaviour
     
     public UnityEvent evento;
     public UnityEvent evento1;
+
+    [SerializeField] private Tablet _tablet;
    
 
     public void Press()
@@ -23,8 +25,9 @@ public class Vestiti : MonoBehaviour
             if (OnButtonPressed != null)
                 OnButtonPressed();
        
-        evento.Invoke();
+            evento.Invoke();
             isClicked = true;
+            
         }
         else
         {
@@ -34,8 +37,11 @@ public class Vestiti : MonoBehaviour
             isClicked = false;
         }
 
-
-
-
     }
+
+    public void VestitoBelleDan(){
+        _tablet.vestitoVerificato ++;
+         _tablet.CheckVestiti();
+    }
+
 }

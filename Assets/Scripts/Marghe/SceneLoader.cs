@@ -1,48 +1,27 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public static class SceneLoader 
+public class SceneLoader : MonoBehaviour
 {
-
-
-
-public enum Scene{
-    Loading,
-    Menu,
-    Game,
-    End
-}
-
-    private static Action onLoaderCallBack;
-
-
-    //"Load" riceve la target scene we want to load    
-    public static void Load(Scene scene)
+    public enum Scene
     {
-        //set the callback action to load the target scene
-        onLoaderCallBack = () =>
-        {
-            SceneManager.LoadScene(scene.ToString());
-        };
-
-        //set the loading scene
-        SceneManager.LoadScene(Scene.Loading.ToString());   
+        Menu,
+        Theatre
     }
 
-
-    public static void LoaderCallback()
+    // Start is called before the first frame update
+    void Start()
     {
-        //execute the loader callback action which will load the target scene
-        if(onLoaderCallBack!=null)
-        {
-            onLoaderCallBack();
-            onLoaderCallBack = null;
-        }
+    }
 
-        
+    // Update is called once per frame
+    void Update()
+    {
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     SceneManager.LoadScene("Loading");
+        // }
     }
 }

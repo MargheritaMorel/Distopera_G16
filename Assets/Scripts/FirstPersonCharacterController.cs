@@ -14,6 +14,8 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private float _groundDistance = 0.4f;
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _jumpHeight = 3f;
+    [SerializeField] private GameObject _initialPosition;
+    [SerializeField] private GameObject _player;
 
 
     private CharacterController _characterController;
@@ -26,6 +28,8 @@ public class FirstPersonCharacterController : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        _player.transform.position = _initialPosition.transform.position;
     }
 
 

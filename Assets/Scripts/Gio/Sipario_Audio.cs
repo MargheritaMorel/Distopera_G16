@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Sipario_Audio : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   AudioSource aud;
+   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   void Start(){
+    aud = GetComponent<AudioSource>();
+  }
+
+   public void play_sound()
+   {
+    aud.Play();
+   }
 }

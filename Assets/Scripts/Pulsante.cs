@@ -15,7 +15,7 @@ public class Pulsante : MonoBehaviour
 
     public Color unpressedColor;
     public Color pressedColor;
-
+    [SerializeField] private GameObject _faro;
     private MeshRenderer renderer;
     private bool isPressed = false;
     private bool isOpened = false;
@@ -49,10 +49,12 @@ public class Pulsante : MonoBehaviour
             //When Button has reached the end of travel rise event
             if (OnButtonPressed != null)
                 OnButtonPressed();
+            _faro.SetActive(false);
         }));
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
         pressSequence.OnComplete(() =>
         {
+            
             if (!isOpened)
             {
                 evento.Invoke();
@@ -60,6 +62,7 @@ public class Pulsante : MonoBehaviour
             }
             else
             {
+                _faro.SetActive(true);
                 evento1.Invoke();
                 isOpened = false;
             }

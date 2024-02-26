@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] GameObject loadingScreen;
-    [SerializeField] CanvasGroup canvasGroupLoading;
+    [SerializeField] GameObject _loadingScreen;
+    [SerializeField] CanvasGroup _canvasGroupLoading;
 
 
     public SceneLoader.Scene currentScene;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(canvasGroupLoading.gameObject);
+        DontDestroyOnLoad(_canvasGroupLoading.gameObject);
         _player.GetComponent<FirstPersonCharacterController>().enabled = false;
     }
 
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // canvasGroupLoading.enabled = true;
-            loadingScreen.SetActive(true);
+            _loadingScreen.SetActive(true);
             StartCoroutine(LoadScene("Theatre"));
         }
 
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadScene(string sceneName)
     {
-        loadingScreen.SetActive(true);
+        _loadingScreen.SetActive(true);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
         while(!operation.isDone)
@@ -104,17 +104,17 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadingScreenFadeOut(float duration)
     {
         float timePassed = 0f;
-        float startAlpha = canvasGroupLoading.alpha;
+        float startAlpha = _canvasGroupLoading.alpha;
 
         while(timePassed < duration)
         {
             timePassed += Time.deltaTime;
-            canvasGroupLoading.alpha = Mathf.Lerp(startAlpha, 0, timePassed / duration);
+            _canvasGroupLoading.alpha = Mathf.Lerp(startAlpha, 0, timePassed / duration);
             yield return null;
         }
 
         currentScene = SceneLoader.Scene.Theatre;
-        loadingScreen.SetActive(false);
-        canvasGroupLoading.alpha = 1f;
+        _loadingScreen.SetActive(false);
+        _canvasGroupLoading.alpha = 1f;
     }
 }

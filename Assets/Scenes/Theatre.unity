@@ -6892,6 +6892,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233923507}
   m_Mesh: {fileID: 4244471873798342193, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+--- !u!108 &241572881 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 3166496476601273958, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
+  m_PrefabInstance: {fileID: 618107493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &246536505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20498,20 +20503,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1532455900}
     m_Modifications:
     - target: {fileID: 3028931019133636933, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 1170783752}
+    - target: {fileID: 3028931019133636933, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressDuration
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3028931019133636933, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.b
-      value: 0.08331477
+      value: 0.039215688
       objectReference: {fileID: 0}
     - target: {fileID: 3028931019133636933, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.g
-      value: 0.8962264
+      value: 0.039215688
       objectReference: {fileID: 0}
     - target: {fileID: 3028931019133636933, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.r
-      value: 0.05411173
+      value: 0.94509804
       objectReference: {fileID: 0}
     - target: {fileID: 3028931019133636933, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: releaseDuration
@@ -20530,20 +20539,24 @@ PrefabInstance:
       value: 0.94509804
       objectReference: {fileID: 0}
     - target: {fileID: 4625626759287843925, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 1208385871}
+    - target: {fileID: 4625626759287843925, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressDuration
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4625626759287843925, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.b
-      value: 0.08627451
+      value: 0.039215688
       objectReference: {fileID: 0}
     - target: {fileID: 4625626759287843925, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.g
-      value: 0.8980392
+      value: 0.039215688
       objectReference: {fileID: 0}
     - target: {fileID: 4625626759287843925, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.r
-      value: 0.05490196
+      value: 0.94509804
       objectReference: {fileID: 0}
     - target: {fileID: 4625626759287843925, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: releaseDuration
@@ -20618,20 +20631,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7547097109473842172, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
+      propertyPath: _light
+      value: 
+      objectReference: {fileID: 241572881}
+    - target: {fileID: 7547097109473842172, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressDuration
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7547097109473842172, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.b
-      value: 0.08627451
+      value: 0.039215688
       objectReference: {fileID: 0}
     - target: {fileID: 7547097109473842172, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.g
-      value: 0.8980392
+      value: 0.039215688
       objectReference: {fileID: 0}
     - target: {fileID: 7547097109473842172, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: pressedColor.r
-      value: 0.05490196
+      value: 0.94509804
       objectReference: {fileID: 0}
     - target: {fileID: 7547097109473842172, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
       propertyPath: releaseDuration
@@ -38041,6 +38058,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167440906}
   m_Mesh: {fileID: -6561936918366468245, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+--- !u!108 &1170783752 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 7585723854863453407, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
+  m_PrefabInstance: {fileID: 618107493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1173031298
 GameObject:
   m_ObjectHideFlags: 0
@@ -39511,6 +39533,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!108 &1208385871 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 251229709020180943, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
+  m_PrefabInstance: {fileID: 618107493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1209725866
 PrefabInstance:
   m_ObjectHideFlags: 0

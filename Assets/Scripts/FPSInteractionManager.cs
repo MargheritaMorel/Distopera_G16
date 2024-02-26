@@ -35,6 +35,7 @@ public class FPSInteractionManager : MonoBehaviour
     void Start()
     {
         _fpsController = GetComponent<CharacterController>();
+        StartSnapPoint(false, null);
     }
 
     void Update()
@@ -188,7 +189,22 @@ public class FPSInteractionManager : MonoBehaviour
             }
             oggetto._isPlaced = false;
         }
+        StartSnapPoint(true, oggetto);
         Grab(grabbable);
+    }
+
+    private void StartSnapPoint(bool setUp, OggettoScena snap)
+    {
+        foreach (SnapPoint snapPoint in snapPoints)
+        {
+            if (snapPoint.isUsed == false && setUp)
+            {
+                snapPoint.gameObject.SetActive(true);
+                if (snapPoint == snap._snappointCorretto) snapPoint.rightPosition = true;
+                else snapPoint.rightPosition = false;
+            }
+            else snapPoint.gameObject.SetActive(false);
+        }
     }
 
     //si può pensare di portare fuori questa funzione dall FPS controller
@@ -216,6 +232,7 @@ public class FPSInteractionManager : MonoBehaviour
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
             grabbable.transform.position = closestSnapPoint.transform.position;
+            oggetto.setOriginalRotation();
             oggetto._isPlaced = true;
             oggetto._snappoint = closestSnapPoint;
             oggetto._snappoint.isUsed = true;
@@ -224,6 +241,9 @@ public class FPSInteractionManager : MonoBehaviour
             closestSnapPoint.gameObject.SetActive(false);
 
         }
-            grabbable.Drop();
+        grabbable.Drop();
+
+
+        StartSnapPoint(false, null);
     }
 }

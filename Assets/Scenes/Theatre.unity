@@ -9520,7 +9520,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -14251,6 +14251,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8698840585938666424, guid: 3b6ba24a82e7f1042b4d266e4bb87b36, type: 3}
   m_PrefabInstance: {fileID: 430574832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &440973571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3325388810043001757, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+  m_PrefabInstance: {fileID: 1183565169}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &442442334 stripped
 GameObject:
@@ -49756,9 +49761,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 636486668c1f0bb4581e7b805eb9f1c6, type: 2}
     - target: {fileID: 5866666021909216657, guid: 6212ae74efc56a04ab3b95d8debb9350, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6212ae74efc56a04ab3b95d8debb9350, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8a1e9cbe2599398468629450057fb77d, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 6212ae74efc56a04ab3b95d8debb9350, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7179952766287911660, guid: 6212ae74efc56a04ab3b95d8debb9350, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -49838,16 +49851,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 69698890}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: set_timeSamples
-        m_Mode: 3
+      - m_Target: {fileID: 1556250494}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: LookAt
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_ObjectArgument: {fileID: 440973571}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: evento finito
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!65 &1556250492
@@ -49871,6 +49884,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.0800798, z: 0.78325826}
   m_Center: {x: 0.000000004445282, y: 0.8361107, z: -0.10837089}
+--- !u!4 &1556250494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6212ae74efc56a04ab3b95d8debb9350, type: 3}
+  m_PrefabInstance: {fileID: 1556250488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1562508287
 GameObject:
   m_ObjectHideFlags: 0

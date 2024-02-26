@@ -14,12 +14,12 @@ public class GameManager : MonoBehaviour
 
     public SceneLoader.Scene currentScene;
 
-    public GameObject menu;
-    public GameObject tablet;
-    public GameObject dialoguePanel;
+    // public GameObject menu;
+    // public GameObject tablet;
+    // public GameObject dialoguePanel;
 
 
-    public GameObject player;
+    public GameObject _player;
     
     private void Awake()
     {
@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        currentScene = SceneLoader.Scene.Menu;
+
     }
     
     //This function is called when the object becomes enabled and active to load the scene
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(canvasGroupLoading.gameObject);
+        _player.GetComponent<FirstPersonCharacterController>().enabled = false;
     }
 
     private void Update()
@@ -46,40 +49,42 @@ public class GameManager : MonoBehaviour
         //Carica la scena del gioco quando si preme il tasto spazio
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            // canvasGroupLoading.enabled = true;
+            loadingScreen.SetActive(true);
             StartCoroutine(LoadScene("Theatre"));
         }
 
-        if(currentScene == SceneLoader.Scene.Menu)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(LoadScene("Theatre"));
-            }
-            currentScene = SceneLoader.Scene.Theatre;
-        }
+        // if(currentScene == SceneLoader.Scene.Menu)
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Space))
+        //     {
+        //         StartCoroutine(LoadScene("Theatre"));
+        //     }
+        //     currentScene = SceneLoader.Scene.Theatre;
+        // }
 
         //Carica la scena del menu  all'avvio del gioco
         if (currentScene.ToString() == "Menu")
         {
-            player.GetComponent<FirstPersonCharacterController>().enabled = false;
+            _player.GetComponent<FirstPersonCharacterController>().enabled = false;
         }
 
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
         if (currentScene.ToString() == "c")
         {
-            player.GetComponent<FirstPersonCharacterController>().enabled = true;
+            _player.GetComponent<FirstPersonCharacterController>().enabled = true;
         }
         
 
         //Disabilita il movimento del player quando il menu, il tablet o le etichette sono attive 
-        if(menu.activeSelf == true || tablet.activeSelf == true || dialoguePanel.activeSelf == true) 
-        {
-            player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        }
-        else
-        {
-            player.GetComponent<FirstPersonCharacterController>().enabled = true;
-        }
+        // if(menu.activeSelf == true || tablet.activeSelf == true || dialoguePanel.activeSelf == true) 
+        // {
+        //     _player.GetComponent<FirstPersonCharacterController>().enabled = false;
+        // }
+        // else
+        // {
+        //     _player.GetComponent<FirstPersonCharacterController>().enabled = true;
+        // }
         
     }
 
@@ -108,6 +113,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
+        currentScene = SceneLoader.Scene.Theatre;
         loadingScreen.SetActive(false);
         canvasGroupLoading.alpha = 1f;
     }

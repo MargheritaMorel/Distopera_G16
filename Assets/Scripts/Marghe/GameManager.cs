@@ -14,10 +14,6 @@ public class GameManager : MonoBehaviour
 
     public SceneLoader.Scene currentScene;
 
-    // public GameObject menu;
-    // public GameObject tablet;
-    // public GameObject dialoguePanel;
-
 
     public GameObject _player;
     
@@ -41,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(_canvasGroupLoading.gameObject);
-        _player.GetComponent<FirstPersonCharacterController>().enabled = false;
+        _player.GetComponent<FirstPersonCharacterController>().enabled = true;
     }
 
     private void Update()
@@ -54,19 +50,10 @@ public class GameManager : MonoBehaviour
             StartCoroutine(LoadScene("Theatre"));
         }
 
-        // if(currentScene == SceneLoader.Scene.Menu)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.Space))
-        //     {
-        //         StartCoroutine(LoadScene("Theatre"));
-        //     }
-        //     currentScene = SceneLoader.Scene.Theatre;
-        // }
-
         //Carica la scena del menu  all'avvio del gioco
         if (currentScene.ToString() == "Menu")
         {
-            _player.GetComponent<FirstPersonCharacterController>().enabled = false;
+            //_player.GetComponent<FirstPersonCharacterController>().enabled = false;
         }
 
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
@@ -74,19 +61,7 @@ public class GameManager : MonoBehaviour
         {
             _player.GetComponent<FirstPersonCharacterController>().enabled = true;
         }
-        
-
-        //Disabilita il movimento del player quando il menu, il tablet o le etichette sono attive 
-        // if(menu.activeSelf == true || tablet.activeSelf == true || dialoguePanel.activeSelf == true) 
-        // {
-        //     _player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        // }
-        // else
-        // {
-        //     _player.GetComponent<FirstPersonCharacterController>().enabled = true;
-        // }
-        
-    }
+ }
 
     IEnumerator LoadScene(string sceneName)
     {

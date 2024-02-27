@@ -15,6 +15,7 @@ public class Button3D : MonoBehaviour
 
     public Color unpressedColor;
     public Color pressedColor;
+    public Light _light;
 
     private MeshRenderer renderer;
     private bool isPressed = false;
@@ -26,7 +27,8 @@ public class Button3D : MonoBehaviour
     void Start ()
     {
         initialLocalYPos = movingPieceT.localPosition.y;
-
+        unpressedColor.a = 0.6f;
+        pressedColor.a = 0.95f;
         renderer = movingPieceT.GetComponent<MeshRenderer>();
         if (renderer != null)
             renderer.material.color = unpressedColor;
@@ -35,27 +37,34 @@ public class Button3D : MonoBehaviour
 
     public void Press()
     {
-        if (isPressed)
-            return;
-
-        isPressed = true;
         if (renderer != null)
             renderer.material.color = pressedColor;
 
         Sequence pressSequence = DOTween.Sequence();
-        pressSequence.Append(movingPieceT.DOLocalMoveY(localYFinalPressedPos, pressDuration).OnComplete(() => 
+        if (isPressed == false)
         {
-            //When Button has reached the end of travel rise event
-            if (OnButtonPressed != null)
-                OnButtonPressed();
-        }));
-        pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
-        pressSequence.OnComplete(() => 
+            pressSequence.Append(movingPieceT.DOLocalMoveY(localYFinalPressedPos, pressDuration).OnComplete(() =>
+            {
+                //When Button has reached the end of travel rise event
+                if (OnButtonPressed != null)
+                    OnButtonPressed();
+                isPressed = true;
+                if (_light != null)
+                    _light.gameObject.SetActive(true);
+            }));
+        }
+        else
         {
-           
-            isPressed = false;
-            if (renderer != null)
-                renderer.material.color = unpressedColor;
-        });
+            pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, pressDuration).OnComplete(() =>
+            {
+                isPressed = false;
+                if (OnButtonPressed != null)
+                    OnButtonPressed();
+                if (renderer != null)
+                    renderer.material.color = unpressedColor;
+                if (_light != null)
+                    _light.gameObject.SetActive(false);
+            }));
+        }
     }
 }

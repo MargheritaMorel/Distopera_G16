@@ -5,7 +5,9 @@ using System;
 
 public class FirstPersonCharacterController : MonoBehaviour
 {
-    [SerializeField] private Transform _cameraT;
+    
+   
+   [SerializeField] private Transform _cameraT;
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _mouseSensitivity = 100f;
 
@@ -17,11 +19,28 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private GameObject _initialPosition;
     [SerializeField] private GameObject _player;
 
+    [SerializeField] private float stepFrequency = 0.5f;
+   
+   
+   
+
+    [Header("Footsteps parameters")]
+    [SerializeField] private AudioSource footstepAudioSource = default;
+    [SerializeField] private AudioClip[] woodClips = default;
+    [SerializeField] private AudioClip[] marbleClips = default;
+    [SerializeField] private AudioClip[] moquetteClips = default;
+
+
 
     private CharacterController _characterController;
     private float cameraXRotation = 0f;
     private Vector3 _velocity;
     private bool _isGrounded;
+    private string currentFloorTag = "";
+    
+
+
+
 
     void Start()
     {
@@ -30,6 +49,8 @@ public class FirstPersonCharacterController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         _player.transform.position = _initialPosition.transform.position;
+
+        
     }
 
 
@@ -51,6 +72,13 @@ public class FirstPersonCharacterController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity * Time.deltaTime;
 
+        RaycastHit hit;
+        if (Physics.Raycast(_groundCheck.position, Vector3.down, out hit, _groundDistance, _groundMask))
+        {
+            currentFloorTag = hit.collider.gameObject.tag;
+        
+        } 
+
         //Compute direction According to Camera Orientation
         transform.Rotate(Vector3.up, mouseX);
         cameraXRotation -= mouseY;
@@ -63,6 +91,10 @@ public class FirstPersonCharacterController : MonoBehaviour
         Vector3 move = (transform.right * h + transform.forward * v).normalized;
         _characterController.Move(move * _speed * Time.deltaTime);
 
+
+
+       
+
         //JUMPING
         if (Input.GetKey(KeyCode.Space) && _isGrounded)
         {
@@ -72,6 +104,11 @@ public class FirstPersonCharacterController : MonoBehaviour
         //FALLING
         _velocity.y += _gravity * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
+
+        PlayFootstepSound();
+
+
+        
     }
 
     private void UpdateCursor()
@@ -82,4 +119,42 @@ public class FirstPersonCharacterController : MonoBehaviour
         if (Cursor.lockState == CursorLockMode.Locked && Input.GetKeyDown(KeyCode.Escape))
             Cursor.lockState = CursorLockMode.None;
     }
+
+   
+    
+    private void PlayFootstepSound()
+    {
+       
+        AudioClip[] clipsToPlay = null;
+       
+
+        if (!string.IsNullOrEmpty(currentFloorTag))
+        {
+           
+            switch (currentFloorTag)
+            {
+                case "Footsteps/WOOD":
+                    clipsToPlay = woodClips;
+                    break;
+                case "Footsteps/MARBLE":
+                    clipsToPlay = marbleClips;
+                    break;
+                case "Footsteps/MOQUETTE":
+                    clipsToPlay = moquetteClips;
+                    break;
+
+                            
+            }
+
+            if (clipsToPlay != null && clipsToPlay.Length > 0)
+            {
+                AudioClip clipToPlay = clipsToPlay[UnityEngine.Random.Range(0, clipsToPlay.Length)];
+                footstepAudioSource.PlayOneShot(clipToPlay);
+            }
+        }
+    }
+    
+
+
+
 }

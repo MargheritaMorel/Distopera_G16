@@ -25,6 +25,11 @@ public class FPSInteractionManager : MonoBehaviour
 
     private Grabbable _grabbedObject = null;
 
+    [Header("Sorgente Audio")]
+    [SerializeField] private AudioSource audioGrab;
+    [SerializeField] private AudioSource audioDrop;
+
+
     [SerializeField] private List<SnapPoint> snapPoints;
     [SerializeField] private float snapRange = 2f;
     private OggettoScena _oggettoScena = null;
@@ -160,6 +165,12 @@ public class FPSInteractionManager : MonoBehaviour
         rb.drag = 1;
         rb.constraints = RigidbodyConstraints.None;
         //controllo se oggetto grabbato è un oggetto che va sul palco , magari con tag "oggettoPalco"
+        
+        if(audioDrop != null)
+        {
+            audioDrop.Play();
+        }
+        
         if (_grabbedObject.tag == "OggettoScena")
         {
             DropOggettoInScena(_grabbedObject, _oggettoScena);
@@ -182,8 +193,14 @@ public class FPSInteractionManager : MonoBehaviour
             rb.drag = 10;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
             grabbable.transform.SetParent(_holdArea);
+
         }
         _target.enabled = false;
+
+        if (audioGrab != null)
+        {
+            audioGrab.Play();
+        }
     }
 
     private void DebugRaycast()

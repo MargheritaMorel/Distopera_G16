@@ -6,6 +6,9 @@ TagManager:
   tags:
   - OggettoScena
   - Tablet
+  - Footsteps/WOOD
+  - Footsteps/MARBLE
+  - Footsteps/MOQUETTE
   layers:
   - Default
   - TransparentFX

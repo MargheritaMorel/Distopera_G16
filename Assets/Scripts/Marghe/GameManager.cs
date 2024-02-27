@@ -23,10 +23,10 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
 
         currentScene = SceneLoader.Scene.Menu;
 

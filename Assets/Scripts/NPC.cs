@@ -14,7 +14,7 @@ public class NPC : MonoBehaviour
     public bool isClicked = false;
     private Animator _animator;
     public Transform _lookObj;
-    private Vector3 inizialposition;
+    private Quaternion initialposition;
     public UnityEvent evento;
     //private float initialLocalYPos;
     //public Transform movingPieceT;
@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour
     void Start()
     {
         //initialLocalYPos = movingPieceT.localPosition.y;
-         inizialposition = _character.position;
+         initialposition = _character.rotation;
        
         currentTime = TimeAmount;
         _animator = GetComponent<Animator>();
@@ -49,8 +49,8 @@ public class NPC : MonoBehaviour
                 _animator.SetBool("isClicked", isClicked);
                 currentTime = TimeAmount;
 
-                
-                transform.LookAt(inizialposition);
+
+                _character.rotation = initialposition;
             }
 
         }

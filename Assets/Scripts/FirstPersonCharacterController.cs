@@ -5,7 +5,9 @@ using System;
 
 public class FirstPersonCharacterController : MonoBehaviour
 {
-    [SerializeField] private Transform _cameraT;
+    
+   
+   [SerializeField] private Transform _cameraT;
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _mouseSensitivity = 100f;
 
@@ -16,6 +18,8 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private float _jumpHeight = 3f;
     [SerializeField] private GameObject _initialPosition;
     [SerializeField] private GameObject _player;
+
+    [SerializeField] private float stepFrequency = 0.5f;
    
    
    
@@ -33,6 +37,7 @@ public class FirstPersonCharacterController : MonoBehaviour
     private Vector3 _velocity;
     private bool _isGrounded;
     private string currentFloorTag = "";
+    
 
 
 
@@ -119,10 +124,13 @@ public class FirstPersonCharacterController : MonoBehaviour
     
     private void PlayFootstepSound()
     {
+       
         AudioClip[] clipsToPlay = null;
+       
 
         if (!string.IsNullOrEmpty(currentFloorTag))
         {
+           
             switch (currentFloorTag)
             {
                 case "Footsteps/WOOD":

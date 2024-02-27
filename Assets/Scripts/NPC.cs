@@ -10,19 +10,20 @@ public class NPC : MonoBehaviour
     public Action OnButtonClosed;
 
     public bool isClicked = false;
+    private Animator _animator;
 
     public UnityEvent evento;
    // public UnityEvent evento1;
     // Start is called before the first frame update
     void Start()
     {
-        
+         _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateAnimations();
     }
     public void Press()
     {
@@ -31,9 +32,10 @@ public class NPC : MonoBehaviour
         {
             if (OnButtonPressed != null)
                 OnButtonPressed();
-            evento.Invoke();
             isClicked = true;
+            evento.Invoke();
             
+
         }
         else
         {
@@ -47,5 +49,11 @@ public class NPC : MonoBehaviour
 
 
 
+    }
+    private void UpdateAnimations()
+    {
+        _animator.SetBool("isClicked", isClicked);
+
+       
     }
 }

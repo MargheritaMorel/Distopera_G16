@@ -58,18 +58,18 @@ public class Tablet : MonoBehaviour
     public void CheckOggettiScena()
     {
         if(oggettoScenaPiazzato == 1){
-            _textTask1.text = "Task SCENOGRAFIA 1/4";
+            _textTask1.text = "SCENOGRAFIA 1/4";
         }
         if(oggettoScenaPiazzato == 2){
-            _textTask1.text = "Task SCENOGRAFIA 2/4";
+            _textTask1.text = "SCENOGRAFIA 2/4";
         }
         if(oggettoScenaPiazzato == 3){
-            _textTask1.text = "Task SCENOGRAFIA 3/4";
+            _textTask1.text = "SCENOGRAFIA 3/4";
         }
         if (oggettoScenaPiazzato == 4)
         {
             oggettiCompleto = true;
-             _textTask1.text = "TASK SCENOGRAFIA COMPLETATO 4/4";
+             _textTask1.text = "SCENOGRAFIA COMPLETATO 4/4";
              panelTask1 = panelTask1.GetComponent<Image>();
              panelTask1.color = UnityEngine.Color.green;
             _toggleTask1.isOn = true;
@@ -98,13 +98,13 @@ public class Tablet : MonoBehaviour
     public void CheckLuciAccese()
     {   
         if(luceAccesa == 1){
-            _textTask2.text = "Task LUCI 1/3";
+            _textTask2.text = "LUCI 1/3";
         }
         if(luceAccesa == 2){
-            _textTask2.text = "Task LUCI 2/3";
+            _textTask2.text = "LUCI 2/3";
         }
         if(luceAccesa == 3){
-            _textTask2.text = "TASK LUCI COMPLETATO 3/3";
+            _textTask2.text = "LUCI COMPLETATO 3/3";
              panelTask2 = panelTask2.GetComponent<Image>();
              panelTask2.color = UnityEngine.Color.green;
             _toggleTask2.isOn = true;
@@ -118,10 +118,10 @@ public class Tablet : MonoBehaviour
 
     public void CheckVestiti(){
         if(vestitoVerificato == 1){
-            _textTask3.text = "Task VESTITI 1/2";
+            _textTask3.text = "VESTITI 1/2";
         }
         if(vestitoVerificato == 2){
-            _textTask3.text = "TASK VESTITI COMPLETATO 2/2";
+            _textTask3.text = "VESTITI COMPLETATO 2/2";
              panelTask3 = panelTask3.GetComponent<Image>();
              panelTask3.color = UnityEngine.Color.green;
              _toggleTask3.isOn = true;

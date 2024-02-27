@@ -7,6 +7,8 @@ using System;
 public class Pulsante : MonoBehaviour
 {
     public Action OnButtonPressed;
+    public GameObject attore;
+    public GameObject attrice;
 
     public Transform movingPieceT;
     public float localYFinalPressedPos;
@@ -50,6 +52,8 @@ public class Pulsante : MonoBehaviour
             if (OnButtonPressed != null)
                 OnButtonPressed();
             _faro.SetActive(false);
+            attore.SetActive(true);
+            attrice.SetActive(true);
         }));
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
         pressSequence.OnComplete(() =>
@@ -65,6 +69,8 @@ public class Pulsante : MonoBehaviour
                 _faro.SetActive(true);
                 evento1.Invoke();
                 isOpened = false;
+                attore.SetActive(false);
+                attrice.SetActive(false);
             }
 
 

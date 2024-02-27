@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -906,10 +906,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -3048521065558448580, guid: 59a7ec6184aa06a4997bd9e63e56362f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 02986e433bbbbb84981ed8942754f7aa, type: 2}
+    - target: {fileID: -3296175604063618789, guid: 59a7ec6184aa06a4997bd9e63e56362f, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/WOOD
+      objectReference: {fileID: 0}
     - target: {fileID: -796861937133395360, guid: 59a7ec6184aa06a4997bd9e63e56362f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4562,6 +4562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 07194e55af81d3e4ebdd4420eb2b286d, type: 3}
       propertyPath: m_Name
       value: Scalone con corrimano 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07194e55af81d3e4ebdd4420eb2b286d, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/MARBLE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41489,6 +41493,86 @@ PrefabInstance:
       propertyPath: _groundMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: footstepAudioSource
+      value: 
+      objectReference: {fileID: 1183565177}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: marbleClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b4972e03739b1470d938d4aa3cc1cdd4, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a28a4d92044b461e96a9bed9e445ed4, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5155bdac86f0e448aa74d361c1703c77, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9aac034c3a5384cb6bb4b6b26777f247, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 79954935ca8b345d88576bbaf236b52d, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: woodClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 86c82e8fbfc0048d29afd2ff9d7080e6, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: moquetteClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: marbleClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 567cd8a6307e7404197ebbd11eeaed25, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: marbleClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c1e2e584e747e4e71826db50c0408ca8, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: marbleClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d9b6df2bd2224954bbe17c8e433c566, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: marbleClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1849bef44bcee4177b7afe5b88a8bffd, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: marbleClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5dafa31554203401eb10a1c577040904, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: moquetteClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 00585d463b75e42f2952c19c2683e71d, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: moquetteClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2119637fbb36e465ea7098bc3e3a47c8, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: moquetteClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6722046ee04b04f33b68d0e243446ed4, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: moquetteClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: eed2f829cdfa24802b49bee31c3c7220, type: 3}
+    - target: {fileID: 3323821350827769350, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: moquetteClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a468ffdc2ef346b494aec085f8a552b, type: 3}
     - target: {fileID: 3324729935528693023, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
       propertyPath: m_Icon
       value: 
@@ -41555,11 +41639,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b4972e03739b1470d938d4aa3cc1cdd4, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.387
-  m_Pitch: 1.5
-  Loop: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -57938,7 +58022,7 @@ GameObject:
   - component: {fileID: 1690187702}
   m_Layer: 0
   m_Name: pavimento (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 18
@@ -63370,6 +63454,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cf50cc9fd3505134193e2cc744c7451a, type: 2}
+    - target: {fileID: 8518299157304382712, guid: cb7fab23216046c42bb111cbe2cd25ad, type: 3}
+      propertyPath: m_TagString
+      value: Footsteps/MOQUETTE
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8056606824872402021, guid: cb7fab23216046c42bb111cbe2cd25ad, type: 3}

@@ -19,13 +19,13 @@ public class PhysicsGrabbable : Grabbable
 
     public override void Grab(GameObject grabber)
     {
-        _collider.enabled = false;
-        _rigidbody.isKinematic = true;
+        //_collider.enabled = false;
+        //_rigidbody.isKinematic = true;
     }
 
     public override void Drop()
     {
-        _collider.enabled = true;
-        _rigidbody.isKinematic = false;
+        //_collider.enabled = true;
+        //_rigidbody.isKinematic = false;
     }
 }

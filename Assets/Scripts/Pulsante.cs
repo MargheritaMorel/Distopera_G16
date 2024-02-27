@@ -17,6 +17,7 @@ public class Pulsante : MonoBehaviour
 
     public Color unpressedColor;
     public Color pressedColor;
+    public Light _light;
     [SerializeField] private GameObject _faro;
     private MeshRenderer renderer;
     private bool isPressed = false;
@@ -29,7 +30,8 @@ public class Pulsante : MonoBehaviour
     void Start()
     {
         initialLocalYPos = movingPieceT.localPosition.y;
-
+        unpressedColor.a = 0.6f;
+        pressedColor.a = 0.95f;
         renderer = movingPieceT.GetComponent<MeshRenderer>();
         if (renderer != null)
             renderer.material.color = unpressedColor;
@@ -38,25 +40,64 @@ public class Pulsante : MonoBehaviour
 
     public void Press()
     {
-        if (isPressed)
+        /*if (isPressed)
             return;
 
-        isPressed = true;
+        isPressed = true;*/
         if (renderer != null)
             renderer.material.color = pressedColor;
 
         Sequence pressSequence = DOTween.Sequence();
-        pressSequence.Append(movingPieceT.DOLocalMoveY(localYFinalPressedPos, pressDuration).OnComplete(() =>
+        if (isPressed == false)
         {
+            pressSequence.Append(movingPieceT.DOLocalMoveY(localYFinalPressedPos, pressDuration).OnComplete(() =>
+            {
             //When Button has reached the end of travel rise event
             if (OnButtonPressed != null)
                 OnButtonPressed();
+            isPressed = true;
+            if (_light != null)
+                _light.gameObject.SetActive(true);
             _faro.SetActive(false);
             attore.SetActive(true);
             attrice.SetActive(true);
-        }));
-        pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
-        pressSequence.OnComplete(() =>
+
+                if (!isOpened)
+                {
+                    evento.Invoke();
+                    isOpened = true;
+                }
+               /*else
+                {
+                    _faro.SetActive(true);
+                    evento1.Invoke();
+                    isOpened = false;
+                    attore.SetActive(false);
+                    attrice.SetActive(false);
+                }*/
+            }));
+        }
+        else
+        {
+            pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, pressDuration).OnComplete(() =>
+            {
+
+                _faro.SetActive(true);
+                evento1.Invoke();
+                isOpened = false;
+                attore.SetActive(false);
+                attrice.SetActive(false);
+                isPressed = false;
+                if (OnButtonPressed != null)
+                    OnButtonPressed();
+                if (renderer != null)
+                    renderer.material.color = unpressedColor;
+                if (_light != null)
+                    _light.gameObject.SetActive(false);
+            }));
+        }
+        //pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
+        /*pressSequence.OnComplete(() =>
         {
             
             if (!isOpened)
@@ -77,6 +118,6 @@ public class Pulsante : MonoBehaviour
             isPressed = false;
             if (renderer != null)
                 renderer.material.color = unpressedColor;
-        });
+        });*/
     }
 }

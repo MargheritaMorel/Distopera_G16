@@ -8,21 +8,44 @@ public class NPC : MonoBehaviour
 {
     public Action OnButtonPressed;
     public Action OnButtonClosed;
-
+    public float TimeAmount;
+    public float currentTime;
     public bool isClicked = false;
     private Animator _animator;
-
+    public Transform _lookObj;
     public UnityEvent evento;
    // public UnityEvent evento1;
     // Start is called before the first frame update
     void Start()
     {
-         _animator = GetComponent<Animator>();
+        currentTime = TimeAmount;
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isClicked)
+        {
+            if (_lookObj != null)
+            {
+            Vector3 newtarget = _lookObj.position;
+            newtarget.y = transform.position.y;
+            transform.LookAt(newtarget);
+            }
+
+            currentTime -= Time.deltaTime;
+
+            if (currentTime <= 0)
+            {
+                isClicked = false;
+                _animator.SetBool("isClicked", isClicked);
+                currentTime = TimeAmount;
+            }
+
+        }
+
+
         UpdateAnimations();
     }
     public void Press()
@@ -52,6 +75,7 @@ public class NPC : MonoBehaviour
     }
     private void UpdateAnimations()
     {
+        
         _animator.SetBool("isClicked", isClicked);
 
        

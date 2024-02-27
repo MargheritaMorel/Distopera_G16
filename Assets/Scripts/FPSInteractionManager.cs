@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class FPSInteractionManager : MonoBehaviour
 {
     [SerializeField] private Transform _fpsCameraT;
+    [SerializeField] private Transform _holdArea;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
     [SerializeField] private Menu _menu;
@@ -32,6 +33,9 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private FirstPersonCharacterController _fpsInventory;
     [SerializeField] private Tablet _tablet;
 
+    private Rigidbody rb = null;
+    private GameObject heldObj;
+
     void Start()
     {
         _fpsController = GetComponent<CharacterController>();
@@ -44,6 +48,9 @@ public class FPSInteractionManager : MonoBehaviour
 
         if(_grabbedObject == null)
             CheckInteraction();
+
+        if (_grabbedObject != null)
+            MoveObject();      
 
         if (_grabbedObject != null && Input.GetMouseButtonDown(0))
             Drop();
@@ -134,29 +141,48 @@ public class FPSInteractionManager : MonoBehaviour
             _target.color = Color.red;
     }
 
+    private void MoveObject()
+    {
+        if (Vector3.Distance(_grabbedObject.transform.position, _holdArea.position) > 0.1f)
+        {
+            Vector3 moveDirection = (_holdArea.position - _grabbedObject.transform.position);
+            rb.AddForce(moveDirection * 150.0f);
+        }
+    }
+
     private void Drop()
     {
         if (_grabbedObject == null)
             return;
 
         _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
-
+        rb.useGravity = true;
+        rb.drag = 1;
+        rb.constraints = RigidbodyConstraints.None;
         //controllo se oggetto grabbato è un oggetto che va sul palco , magari con tag "oggettoPalco"
         if (_grabbedObject.tag == "OggettoScena")
         {
             DropOggettoInScena(_grabbedObject, _oggettoScena);
         }
         _grabbedObject.Drop();
-
+       
         _target.enabled = true;
+        rb = null;
         _grabbedObject = null;
     }
 
     private void Grab(Grabbable grabbable)
     {
         _grabbedObject = grabbable;
-        grabbable.transform.SetParent(_fpsCameraT);
 
+        if (_grabbedObject.GetComponent<Rigidbody>())
+        {
+            rb = _grabbedObject.GetComponent<Rigidbody>();
+            rb.useGravity = false;
+            rb.drag = 10;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            grabbable.transform.SetParent(_holdArea);
+        }
         _target.enabled = false;
     }
 

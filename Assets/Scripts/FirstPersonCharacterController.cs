@@ -25,10 +25,13 @@ public class FirstPersonCharacterController : MonoBehaviour
    
 
     [Header("Footsteps parameters")]
+    [SerializeField] float baseSpeed = 1.0f;
     [SerializeField] private AudioSource footstepAudioSource = default;
     [SerializeField] private AudioClip[] woodClips = default;
     [SerializeField] private AudioClip[] marbleClips = default;
     [SerializeField] private AudioClip[] moquetteClips = default;
+    private float footstepTimer = 0;
+
 
 
 
@@ -126,32 +129,40 @@ public class FirstPersonCharacterController : MonoBehaviour
     {
        
         AudioClip[] clipsToPlay = null;
-       
 
-        if (!string.IsNullOrEmpty(currentFloorTag))
+        footstepTimer -= Time.deltaTime;
+
+       
+        if (footstepTimer <= 0)
         {
-           
-            switch (currentFloorTag)
+
+            if (!string.IsNullOrEmpty(currentFloorTag))
             {
-                case "Footsteps/WOOD":
-                    clipsToPlay = woodClips;
-                    break;
-                case "Footsteps/MARBLE":
-                    clipsToPlay = marbleClips;
-                    break;
-                case "Footsteps/MOQUETTE":
-                    clipsToPlay = moquetteClips;
-                    break;
+           
+                switch (currentFloorTag)
+                {
+                    case "Footsteps/WOOD":
+                        clipsToPlay = woodClips;
+                        break;
+                    case "Footsteps/MARBLE":
+                        clipsToPlay = marbleClips;
+                        break;
+                    case "Footsteps/MOQUETTE":
+                        clipsToPlay = moquetteClips;
+                        break;
 
                             
-            }
+                }
 
             if (clipsToPlay != null && clipsToPlay.Length > 0)
             {
                 AudioClip clipToPlay = clipsToPlay[UnityEngine.Random.Range(0, clipsToPlay.Length)];
                 footstepAudioSource.PlayOneShot(clipToPlay);
             }
+            }
+            footstepTimer = baseSpeed;
         }
+
     }
     
 

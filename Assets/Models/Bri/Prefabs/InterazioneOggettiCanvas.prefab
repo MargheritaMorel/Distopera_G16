@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3182235209896180006, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
       propertyPath: m_Name
-      value: Luci
+      value: InterazioneOggettiCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 7554356140597425133, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
       propertyPath: m_Pivot.x

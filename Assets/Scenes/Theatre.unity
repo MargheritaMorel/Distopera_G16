@@ -7973,7 +7973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oggettoScena: {fileID: 164397390}
   _snappoint: {fileID: 0}
-  _snappointCorretto: {fileID: 0}
+  _snappointCorretto: {fileID: 132642279}
   _isPlaced: 0
 --- !u!114 &164397393
 MonoBehaviour:
@@ -7995,7 +7995,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164397390}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -13192,7 +13192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oggettoScena: {fileID: 263851161}
   _snappoint: {fileID: 0}
-  _snappointCorretto: {fileID: 132642279}
+  _snappointCorretto: {fileID: 1475974491}
   _isPlaced: 0
 --- !u!114 &263851172
 MonoBehaviour:
@@ -13214,7 +13214,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263851161}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -16425,7 +16425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oggettoScena: {fileID: 359229103}
   _snappoint: {fileID: 0}
-  _snappointCorretto: {fileID: 0}
+  _snappointCorretto: {fileID: 1910346190}
   _isPlaced: 0
 --- !u!114 &359229109
 MonoBehaviour:
@@ -16447,7 +16447,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359229103}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -45679,7 +45679,7 @@ PrefabInstance:
       objectReference: {fileID: 132642277}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.29
+      value: -32.3
       objectReference: {fileID: 0}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51664,7 +51664,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210035077}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -64176,7 +64176,7 @@ PrefabInstance:
       objectReference: {fileID: 1810540629}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.78
+      value: -36.49
       objectReference: {fileID: 0}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.y
@@ -64184,7 +64184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -99.44
+      value: -102.72
       objectReference: {fileID: 0}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalRotation.w
@@ -81360,7 +81360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.27
+      value: -31.58
       objectReference: {fileID: 0}
     - target: {fileID: 1362444392327084115, guid: 540257b788e3c21438b84c092eed7996, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84312,7 +84312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oggettoScena: {fileID: 2024244290}
   _snappoint: {fileID: 0}
-  _snappointCorretto: {fileID: 0}
+  _snappointCorretto: {fileID: 1942277711}
   _isPlaced: 0
 --- !u!114 &2024244293
 MonoBehaviour:
@@ -84334,7 +84334,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024244290}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

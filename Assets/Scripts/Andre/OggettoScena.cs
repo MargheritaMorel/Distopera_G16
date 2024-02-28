@@ -8,6 +8,7 @@ public class OggettoScena : MonoBehaviour
     [SerializeField] private GameObject _oggettoScena;
     [SerializeField] public SnapPoint _snappoint;
     [SerializeField] public SnapPoint _snappointCorretto;
+    private Rigidbody m_Rigidbody;
     public bool _isPlaced = false;
     private Quaternion _originalRotation;
     private Vector3 _originalScale;
@@ -17,6 +18,7 @@ public class OggettoScena : MonoBehaviour
     {
         _originalRotation = _oggettoScena.transform.rotation;
         _originalScale = _oggettoScena.transform.localScale;
+        m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -29,5 +31,15 @@ public class OggettoScena : MonoBehaviour
     {
         _oggettoScena.transform.rotation = _originalRotation;
         _oggettoScena.transform.localScale = _originalScale;
+    }
+
+    public void setFreeze()
+    {
+        m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    public void setFreedom()
+    {
+        m_Rigidbody.constraints = RigidbodyConstraints.None;
     }
 }

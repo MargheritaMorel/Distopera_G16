@@ -12,6 +12,10 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject _director;
     [SerializeField] private GameObject _tablet;
 
+    [Header("Sorgenti Audio")]
+    [SerializeField] AudioSource audioPopout;
+    [SerializeField] AudioSource audioPopup;
+
 
     void Awake()
     {
@@ -32,9 +36,11 @@ public class TutorialManager : MonoBehaviour
         {
             StartCoroutine(WaitForSeconds(2));
             _wasdcanvas.SetActive(true);
+            audioPopup.Play();
 
             StartCoroutine(WaitForSeconds(6));
             _wasdcanvas.SetActive(false);
+            audioPopout.Play();
         }
     }
 

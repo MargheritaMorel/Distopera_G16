@@ -30414,12 +30414,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8285528658554423547, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -3897598030841919186, guid: 458ac18cfe69646988922fc78af14370, type: 3}
+    - target: {fileID: -1398466578880610427, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f9925334dbf9a846b0caf305e68818d, type: 2}
     - target: {fileID: 919132149155446097, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
       propertyPath: m_Name
       value: Man_Walking
       objectReference: {fileID: 0}
+    - target: {fileID: 3102197598461991335, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aadd5a709a48466c887296bb5b1b8110, type: 2}
+    - target: {fileID: 4015603512402054206, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1af6d60d7c40a44a7149ffcd4a57ca, type: 2}
+    - target: {fileID: 6769863803743758771, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3231067496280107102, guid: 2d825ebb1c67d2b43aeb21a738b9fd4c, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -492151007913247379, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
@@ -40250,7 +40271,7 @@ PrefabInstance:
     - target: {fileID: 7927558736831396235, guid: f4aef3f3e5cc2ef49931f4844228ac67, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2442163962622367150, guid: 1191c9cb5a3a86d41990563a41e71646, type: 3}
+      objectReference: {fileID: 2100000, guid: c719e38f25a9480abd2480ab621a2949, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54700,11 +54721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.719727
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.160034
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54738,10 +54759,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8285528658554423547, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -7646453664626807581, guid: 7c91ec7cb289f394ea4060c76cc5c323, type: 3}
+    - target: {fileID: -5167740674249433019, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1af6d60d7c40a44a7149ffcd4a57ca, type: 2}
+    - target: {fileID: -1398466578880610427, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbcfad3046fa13242b4c7b3997bee2ec, type: 2}
     - target: {fileID: 919132149155446097, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
       propertyPath: m_Name
       value: Man_Walking (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3102197598461991335, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -7646453664626807581, guid: 7c91ec7cb289f394ea4060c76cc5c323, type: 3}
+    - target: {fileID: 4015603512402054206, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1af6d60d7c40a44a7149ffcd4a57ca, type: 2}
+    - target: {fileID: 6769863803743758771, guid: be10f2182fc35c1458407a3e9746763b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8693172909504858975, guid: e8fd5643db8563640a8aa89746b4279f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

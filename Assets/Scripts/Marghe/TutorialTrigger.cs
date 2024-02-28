@@ -14,12 +14,6 @@ public class TutorialTrigger : MonoBehaviour
 
     private float timePassed;
 
-
-    private void Start() 
-    {
-
-    }
-
     private void Update() 
     {
         //Disattiva il canva WASD
@@ -57,7 +51,12 @@ public class TutorialTrigger : MonoBehaviour
             grabCanvas.SetActive(false);
             //Debug.Log("Canvas GRab disattivato");
         }
-        
+
+        if(timePassed > 31)
+        {
+            director.GetComponent<BoxCollider>().enabled = true;
+            door.GetComponent<BoxCollider>().isTrigger = true;
+        }        
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -67,33 +66,6 @@ public class TutorialTrigger : MonoBehaviour
         wasdCanvas.SetActive(true);
         tablet.SetActive(false);
         director.GetComponent<BoxCollider>().enabled = false;
+        door.GetComponent<BoxCollider>().isTrigger = false;
     }
-
-
-    // public void ShowWASDCanvas(float seconds)
-    // {
-
-    // }
-
-    // public void ShowInteractCanvas(float seconds)
-    // {
-    //     interactCanvas.SetActive(true);
-
-    //     timePassed += Time.deltaTime;
-    //     if(timePassed > seconds)
-    //     {
-    //         interactCanvas.SetActive(false);
-    //     }
-    // }
-
-    // public void ShowGrabCanvas(float seconds)
-    // {
-    //     grabCanvas.SetActive(true);
-
-    //     timePassed += Time.deltaTime;
-    //     if(timePassed > seconds)
-    //     {
-    //         grabCanvas.SetActive(false);
-    //     }
-    // }
 }

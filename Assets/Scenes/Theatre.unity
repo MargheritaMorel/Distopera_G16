@@ -14212,7 +14212,7 @@ MonoBehaviour:
   grabCanvas: {fileID: 1398301148}
   tablet: {fileID: 1482228652}
   director: {fileID: 1556250489}
-  door: {fileID: 0}
+  door: {fileID: 1334747198}
 --- !u!65 &282793511
 BoxCollider:
   m_ObjectHideFlags: 0

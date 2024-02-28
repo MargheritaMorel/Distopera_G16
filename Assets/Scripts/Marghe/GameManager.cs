@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         }
 
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
-        if (currentScene.ToString() == "c")
+        if (currentScene.ToString() == "Theatre")
         {
             _player.GetComponent<FirstPersonCharacterController>().enabled = true;
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14721945, g: 0.12326928, b: 0.09652343, a: 1}
+  m_IndirectSpecularColor: {r: 0.14721948, g: 0.12326967, b: 0.09652356, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -967,13 +967,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154674572}
+  - component: {fileID: 154674573}
   m_Layer: 0
   m_Name: LoadingNuovo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &154674572
 Transform:
   m_ObjectHideFlags: 0
@@ -990,6 +991,18 @@ Transform:
   - {fileID: 279327071}
   m_Father: {fileID: 2035295003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &154674573
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154674571}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &177831909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &425323407
 Transform:
   m_ObjectHideFlags: 0
@@ -2251,13 +2264,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425323406}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1094.3286, y: 31.296183, z: -52.45049}
-  m_LocalScale: {x: 0.19999996, y: 0.2, z: 0.19999996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 262.25198, y: 156.48091, z: 1457.6436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1147789634}
-  m_Father: {fileID: 2035295003}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &425323408
 CanvasGroup:
@@ -8019,8 +8032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f746e6f393cc44f9606f4da40f40b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadingScreen: {fileID: 779296062}
-  _canvasGroupLoading: {fileID: 425323408}
+  _loadingScreen: {fileID: 2093177465}
+  _canvasGroupLoading: {fileID: 154674573}
   currentScene: 0
   _player: {fileID: 678072225}
 --- !u!1 &1537715068 stripped
@@ -11584,7 +11597,6 @@ Transform:
   - {fileID: 667128136}
   - {fileID: 1886793372}
   - {fileID: 1527615443}
-  - {fileID: 425323407}
   - {fileID: 154674572}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -12419,7 +12431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2093177466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12703,3 +12715,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 2035295003}
   - {fileID: 480818303}
+  - {fileID: 425323407}

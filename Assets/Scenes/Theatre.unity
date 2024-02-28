@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7352,7 +7352,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1585723368}
   m_SourcePrefab: {fileID: 100100000, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
 --- !u!4 &160070237 stripped
 Transform:
@@ -27904,8 +27907,6 @@ GameObject:
   m_Component:
   - component: {fileID: 638874510}
   - component: {fileID: 638874511}
-  - component: {fileID: 638874513}
-  - component: {fileID: 638874512}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -27947,6 +27948,8 @@ MonoBehaviour:
   _grabCanva: {fileID: 1096498360}
   _director: {fileID: 0}
   _tablet: {fileID: 0}
+  audioPopout: {fileID: 0}
+  audioPopup: {fileID: 0}
 --- !u!1 &639447870
 GameObject:
   m_ObjectHideFlags: 0
@@ -37756,7 +37759,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2018840462}
   m_SourcePrefab: {fileID: 100100000, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
 --- !u!4 &873359223 stripped
 Transform:
@@ -53575,7 +53581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1290467483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -61923,7 +61929,7 @@ RectTransform:
   m_GameObject: {fileID: 1488321866}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.89395, y: 0.89395, z: 0.89395}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 565118048}
@@ -61953,10 +61959,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Con il tasto M della tastiera potrai aprire e chiudere il Menu\nCon il
-    tasto T della tastiera potrai aprire e chiudere il Tablet \nCliccando sugli oggetti
-    con il tasto destro del mouse puoi prenderli e rilasciarli \nCliccando su oggetti
-    e personaggi con il tasto sinistro del mouse potrai interagirci  "
+  m_text: "Con il tasto M della tastiera potrai aprire e chiudere il Menu\n\nCon
+    il tasto T della tastiera potrai aprire e chiudere il Tablet \n\nCliccando sugli
+    oggetti con il tasto destro del mouse potrai prenderli e con il sinistro potrai
+    rilasciarli \n\nCliccando su oggetti e personaggi con il tasto sinistro del mouse
+    potrai interagirci  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: b246c4190f4e46ec9352fe15a7b09ce0, type: 2}
@@ -66574,6 +66581,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0024092768, y: 0.0018672327, z: 0.006381465}
   m_Center: {x: -0.000098157296, y: -3.500463e-10, z: 0.003190861}
+--- !u!1 &1585723365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+  m_PrefabInstance: {fileID: 160070236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1585723368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585723365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.324142, y: 0.112549745, z: 8.659855}
+  m_Center: {x: -0.000030517578, y: -0.055130582, z: 0.003916026}
 --- !u!1 &1586496659
 GameObject:
   m_ObjectHideFlags: 0
@@ -83517,6 +83550,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2018840459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+  m_PrefabInstance: {fileID: 873359222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2018840462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018840459}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.324142, y: 0.112549774, z: 8.659853}
+  m_Center: {x: 0.000061035156, y: -0.055130597, z: 0.003916025}
 --- !u!1 &2024244290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1168657323259546298, guid: e3fd88bea319909479bc9805ccbfd084, type: 3}

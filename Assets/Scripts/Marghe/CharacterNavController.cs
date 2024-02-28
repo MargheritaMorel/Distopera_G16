@@ -18,15 +18,15 @@ public class CharacterNavController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            _navMeshAgent.SetDestination(_target.transform.position);
-            _animator.SetBool("isWalking", true);
-        }
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        _navMeshAgent.SetDestination(_target.transform.position);
+        // _animator.SetBool("isWalking", true);
+        // }
 
         if(TargetReached())
         {
-            _animator.SetBool("isWalking", false);
+            _animator.SetBool("isArrived", true);
         }
     }
 

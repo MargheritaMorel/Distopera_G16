@@ -236,7 +236,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8820484808681960735}
+      - m_Target: {fileID: 3182235209896180006}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 4510151126928954125}
   - component: {fileID: 1466003908528671571}
   m_Layer: 5
-  m_Name: Luci
+  m_Name: InteOggetti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,8 +524,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Clicca sull''interruttore con il tasto sinistro del mouse per accendere
-    o spegnere la luce '
+  m_text: Clicca sugli oggetti dell'ambiente con il tasto sinistro del mouse per
+    interagire con loro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7352,7 +7352,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1585723368}
   m_SourcePrefab: {fileID: 100100000, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
 --- !u!4 &160070237 stripped
 Transform:
@@ -28033,8 +28036,6 @@ GameObject:
   m_Component:
   - component: {fileID: 638874510}
   - component: {fileID: 638874511}
-  - component: {fileID: 638874513}
-  - component: {fileID: 638874512}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -37982,7 +37983,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2018840462}
   m_SourcePrefab: {fileID: 100100000, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
 --- !u!4 &873359223 stripped
 Transform:
@@ -44386,6 +44390,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012938110}
   m_Mesh: {fileID: -218638235778213206, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+--- !u!1001 &1016922636
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1281427354}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5304382205946929230, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 90.53
+      objectReference: {fileID: 0}
+    - target: {fileID: -5304382205946929230, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_Name
+      value: stanzagenerale
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7943140849227977981, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+--- !u!4 &1016922637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a270cb68be0334340a7726f9b50539ea, type: 3}
+  m_PrefabInstance: {fileID: 1016922636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1017385026
 GameObject:
   m_ObjectHideFlags: 0
@@ -62204,7 +62286,7 @@ RectTransform:
   m_GameObject: {fileID: 1488321866}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.89395, y: 0.89395, z: 0.89395}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 565118048}
@@ -62234,10 +62316,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Con il tasto M della tastiera potrai aprire e chiudere il Menu\nCon il
-    tasto T della tastiera potrai aprire e chiudere il Tablet \nCliccando sugli oggetti
-    con il tasto destro del mouse puoi prenderli e rilasciarli \nCliccando su oggetti
-    e personaggi con il tasto sinistro del mouse potrai interagirci  "
+  m_text: "Con il tasto M della tastiera potrai aprire e chiudere il Menu\n\nCon
+    il tasto T della tastiera potrai aprire e chiudere il Tablet \n\nCliccando sugli
+    oggetti con il tasto destro del mouse potrai prenderli e con il sinistro potrai
+    rilasciarli \n\nCliccando su oggetti e personaggi con il tasto sinistro del mouse
+    potrai interagirci  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: b246c4190f4e46ec9352fe15a7b09ce0, type: 2}
@@ -63865,6 +63948,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 752019d2dd9957841ace475926bda1ad, type: 3}
       propertyPath: m_Name
       value: scale_regia
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 752019d2dd9957841ace475926bda1ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -66851,6 +66938,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0024092768, y: 0.0018672327, z: 0.006381465}
   m_Center: {x: -0.000098157296, y: -3.500463e-10, z: 0.003190861}
+--- !u!1 &1585723365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+  m_PrefabInstance: {fileID: 160070236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1585723368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585723365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.324142, y: 0.112549745, z: 8.659855}
+  m_Center: {x: -0.000030517578, y: -0.055130582, z: 0.003916026}
 --- !u!1 &1586496659
 GameObject:
   m_ObjectHideFlags: 0
@@ -78638,9 +78751,12 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb7fab23216046c42bb111cbe2cd25ad, type: 3}
       insertIndex: 0
+      addedObject: {fileID: 1016922637}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb7fab23216046c42bb111cbe2cd25ad, type: 3}
+      insertIndex: 1
       addedObject: {fileID: 751074114}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb7fab23216046c42bb111cbe2cd25ad, type: 3}
-      insertIndex: 4
+      insertIndex: 5
       addedObject: {fileID: 1752150385}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb7fab23216046c42bb111cbe2cd25ad, type: 3}
       insertIndex: -1
@@ -83791,6 +83907,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2018840459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c6b1c49ecfb88a4b9e4cca9d0987b3a, type: 3}
+  m_PrefabInstance: {fileID: 873359222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2018840462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018840459}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.324142, y: 0.112549774, z: 8.659853}
+  m_Center: {x: 0.000061035156, y: -0.055130597, z: 0.003916025}
 --- !u!1 &2024244290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1168657323259546298, guid: e3fd88bea319909479bc9805ccbfd084, type: 3}

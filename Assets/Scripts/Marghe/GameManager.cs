@@ -14,10 +14,12 @@ public class GameManager : MonoBehaviour
 
     public SceneLoader.Scene currentScene;
 
-
     public GameObject _player;
+
+    private bool _tutorialIsDone = false;
+    public TutorialManager tutorialManager;
     
-    private void Awake()
+    void Awake()
     {
         if (instance == null)
         {
@@ -33,14 +35,14 @@ public class GameManager : MonoBehaviour
     }
     
     //This function is called when the object becomes enabled and active to load the scene
-    private void Start()
+    void Start()
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(_canvasGroupLoading.gameObject);
         _player.GetComponent<FirstPersonCharacterController>().enabled = true;
     }
 
-    private void Update()
+    void Update()
     {
         //Carica la scena del gioco quando si preme il tasto spazio
         if (Input.GetKeyDown(KeyCode.Space))
@@ -58,10 +60,13 @@ public class GameManager : MonoBehaviour
 
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
         if (currentScene.ToString() == "Theatre")
-        {
-            _player.GetComponent<FirstPersonCharacterController>().enabled = true;
+        {            
+            // if(_tutorialIsDone == false)
+            // {
+            //     tutorialManager.Start();
+            // }
         }
- }
+    }
 
     IEnumerator LoadScene(string sceneName)
     {

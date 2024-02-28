@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
+    [SerializeField] private GameObject _tutorialCanvas;
+    [SerializeField] private GameObject _wasdcanvas;
+    [SerializeField] private GameObject _interactCanva;
+    [SerializeField] private GameObject _grabCanva;
+
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(_tutorialCanvas.activeSelf == true)
+        {
+            StartCoroutine(WaitForSeconds(2));
+            _wasdcanvas.SetActive(true);
+
+            StartCoroutine(WaitForSeconds(6));
+            _wasdcanvas.SetActive(false);
+        }
+    }
+
+    IEnumerator WaitForSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }

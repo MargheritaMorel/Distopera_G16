@@ -28,6 +28,9 @@ public class FPSInteractionManager : MonoBehaviour
     [Header("Sorgente Audio")]
     [SerializeField] private AudioSource audioGrab;
     [SerializeField] private AudioSource audioDrop;
+    [SerializeField] private AudioSource tabletSound;
+    
+    
 
 
     [SerializeField] private List<SnapPoint> snapPoints;
@@ -65,17 +68,26 @@ public class FPSInteractionManager : MonoBehaviour
             if (_tablet.isOpen && firstTimeVisualTabletUI==0) { 
                 Debug.Log("volte successive tablet visualizzato");
                 _tablet.CloseCanvas();
+                tabletSound.Play();
             }
 
             else if (_tablet.isOpen && firstTimeVisualTabletUI==1) { 
                 Debug.Log("prima volta tablet visualizzato");
                 _tablet.CloseCanvas();
                 _tablet.OpenCanvasTask1();
+                tabletSound.Play();
                 firstTimeVisualTabletUI = 0;
             }
             
-            else _tablet.OpenCanvas();
+            else 
+            {
+                _tablet.OpenCanvas();
+                tabletSound.Play();
+
+
+            }
         }
+        
         if (Input.GetKeyDown("m"))
         {
             if (_menu.isOpen)

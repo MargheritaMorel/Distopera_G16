@@ -15,6 +15,9 @@ public class Pulsante : MonoBehaviour
     public float pressDuration = 0.3f;
     public float releaseDuration = 0.1f;
 
+    public float TimeAmount;
+    public float currentTime;
+
     public Color unpressedColor;
     public Color pressedColor;
     public Light _light;
@@ -22,6 +25,7 @@ public class Pulsante : MonoBehaviour
     private MeshRenderer renderer;
     private bool isPressed = false;
     private bool isOpened = false;
+    private bool _esciAttori = false;
     private float initialLocalYPos;
     public UnityEvent evento;
     public UnityEvent evento1;
@@ -35,7 +39,24 @@ public class Pulsante : MonoBehaviour
         renderer = movingPieceT.GetComponent<MeshRenderer>();
         if (renderer != null)
             renderer.material.color = unpressedColor;
+        currentTime = TimeAmount;
 
+    }
+
+    void Update()
+    {
+        if (_esciAttori == true)
+        {
+            currentTime -= Time.deltaTime;
+
+            if (currentTime <= 0 && _esciAttori == true)
+            {
+                attore.SetActive(false);
+                attrice.SetActive(false);
+                currentTime = TimeAmount;
+                _esciAttori = false;
+            }
+        }
     }
 
     public void Press()
@@ -85,8 +106,7 @@ public class Pulsante : MonoBehaviour
                 _faro.SetActive(true);
                 evento1.Invoke();
                 isOpened = false;
-                attore.SetActive(false);
-                attrice.SetActive(false);
+                _esciAttori = true;
                 isPressed = false;
                 if (OnButtonPressed != null)
                     OnButtonPressed();

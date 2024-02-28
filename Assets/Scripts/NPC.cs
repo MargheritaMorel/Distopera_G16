@@ -9,15 +9,22 @@ public class NPC : MonoBehaviour
     public Action OnButtonPressed;
     public Action OnButtonClosed;
     public float TimeAmount;
+    public Transform _character;
     public float currentTime;
     public bool isClicked = false;
     private Animator _animator;
     public Transform _lookObj;
+    private Quaternion initialposition;
     public UnityEvent evento;
-   // public UnityEvent evento1;
+    //private float initialLocalYPos;
+    //public Transform movingPieceT;
+    // public UnityEvent evento1;
     // Start is called before the first frame update
     void Start()
     {
+        //initialLocalYPos = movingPieceT.localPosition.y;
+         initialposition = _character.rotation;
+       
         currentTime = TimeAmount;
         _animator = GetComponent<Animator>();
     }
@@ -41,6 +48,9 @@ public class NPC : MonoBehaviour
                 isClicked = false;
                 _animator.SetBool("isClicked", isClicked);
                 currentTime = TimeAmount;
+
+
+                _character.rotation = initialposition;
             }
 
         }

@@ -23,12 +23,12 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
+        else
+        {
+            Destroy(gameObject);
+        }
 
-        currentScene = SceneLoader.Scene.Menu;
+        //currentScene = SceneLoader.Scene.Menu;
 
     }
     
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(_canvasGroupLoading.gameObject);
-        _player.GetComponent<FirstPersonCharacterController>().enabled = true;
+        //_player.GetComponent<FirstPersonCharacterController>().enabled = true;
     }
 
     private void Update()
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
         if (currentScene.ToString() == "Theatre")
         {
-            _player.GetComponent<FirstPersonCharacterController>().enabled = true;
+            //_player.GetComponent<FirstPersonCharacterController>().enabled = true;
         }
  }
 

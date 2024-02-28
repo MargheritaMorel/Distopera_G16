@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class OpenDoorR: Interactable
 {
+    [SerializeField] AudioSource openAudio;
+    [SerializeField] AudioSource closeAudio; 
     private bool doorOpened;
     //private bool coroutineAllowed;
     [SerializeField] private float _angolo = 80f;
@@ -33,21 +35,26 @@ public class OpenDoorR: Interactable
         //coroutineAllowed = false;
         if (!doorOpened)
         {
+            openAudio.Play();
+            
             for (float i = 0f; i <= _angolo; i += 3f)
             {
                 transform.localRotation = Quaternion.Euler(0f, -i, 0f);
                 yield return new WaitForSeconds(0f);
             }
             doorOpened = true;
+            
         }
         else
         {
+            closeAudio.Play();
             for (float i = _angolo; i >= 0f; i -= 3f)
             {
                 transform.localRotation = Quaternion.Euler(0f, -i, 0f);
                 yield return new WaitForSeconds(0f);
             }
             doorOpened = false;
+            
         }
         //coroutineAllowed = true;
     }

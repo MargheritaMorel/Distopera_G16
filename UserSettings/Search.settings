@@ -8,9 +8,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.310DEAF1" = "animat"
+	"last_search.310DEAF1" = "audio"
 	"OpenInspectorPreview.310DEAF1" = "0"
-	"currentGroup.310DEAF1" = "menu"
+	"currentGroup.310DEAF1" = "settings"
 }
 providers = {
 	packages = {

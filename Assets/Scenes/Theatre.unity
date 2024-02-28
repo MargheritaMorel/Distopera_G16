@@ -18161,7 +18161,6 @@ RectTransform:
   m_LocalScale: {x: 0.66421, y: 0.66421, z: 0.66421}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1272357273}
   - {fileID: 494230668}
   - {fileID: 982366186}
   m_Father: {fileID: 925512905}
@@ -24234,7 +24233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeAmount: 12
-  _character: {fileID: 0}
+  _character: {fileID: 656532339}
   currentTime: 0
   isClicked: 0
   _lookObj: {fileID: 1183565182}
@@ -24286,6 +24285,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7311629, y: 1.7670289, z: 0.5455435}
   m_Center: {x: -0.023692233, y: 0.91078794, z: -0.012010112}
+--- !u!4 &656532339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10d2c6f8f580982429b3d6aef85ebe80, type: 3}
+  m_PrefabInstance: {fileID: 1828357533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &658588760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38216,119 +38220,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1011318559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1011318563}
-  - component: {fileID: 1011318562}
-  - component: {fileID: 1011318561}
-  - component: {fileID: 1011318560}
-  m_Layer: 0
-  m_Name: attore
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1011318560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011318559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b50a194f4b7c043bf2f070b3043e5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Dan
-    sentences:
-    - 'Ecco il nuovo direttore artistico!
-
-      Mi presento, sono uno dei protagonisti
-      dello spettacolo...'
-    - 'Siamo quasi pronti per andare in scena.
-
-      Io interpeto Dan...'
-    - Non vedo l'ora di vedere il mio vestito!
---- !u!114 &1011318561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011318559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d63cadc4c5f124eab9f0487bc7622f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1011318562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011318559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bee7ed7d5239904eaac6b5b8aba06a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeAmount: 0
-  _character: {fileID: 0}
-  currentTime: 0
-  isClicked: 0
-  _lookObj: {fileID: 0}
-  evento:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 360337235}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!4 &1011318563
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011318559}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.787109, y: -22.803955, z: 149.6792}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1630662561}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1012213618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58841,8 +58732,7 @@ Transform:
   m_LocalPosition: {x: 9057.184, y: -1723.9508, z: -5087.4263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1011318563}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1630929395
@@ -70774,6 +70664,8 @@ MonoBehaviour:
   localYFinalPressedPos: 0
   pressDuration: 0.7
   releaseDuration: 0.1
+  TimeAmount: 5
+  currentTime: 0
   unpressedColor: {r: 0.94509804, g: 0.039215688, b: 0.039215688, a: 1}
   pressedColor: {r: 0.94509804, g: 0.039215688, b: 0.039215688, a: 0.4745098}
   _light: {fileID: 1639798245}

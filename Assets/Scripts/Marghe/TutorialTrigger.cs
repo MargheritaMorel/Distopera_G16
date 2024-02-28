@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialTrigger : MonoBehaviour
 {
+    [SerializeField] AudioSource triggerSoundOn;
     public GameObject wasdCanvas;
     public GameObject interactCanvas;
     public GameObject grabCanvas;
@@ -62,6 +63,10 @@ public class TutorialTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         Debug.Log("FPS entered the tutorial trigger");   
+        if (triggerSoundOn != null)
+        {
+            triggerSoundOn.Play();
+        }
 
         wasdCanvas.SetActive(true);
         tablet.SetActive(false);

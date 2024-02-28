@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public GameObject _player;
 
     private bool _tutorialIsDone = false;
-    public TutorialManager tutorialManager;
     
     void Awake()
     {
@@ -30,8 +29,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //currentScene = SceneLoader.Scene.Menu;
-
     }
     
     //This function is called when the object becomes enabled and active to load the scene
@@ -39,7 +36,6 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(_canvasGroupLoading.gameObject);
-        //_player.GetComponent<FirstPersonCharacterController>().enabled = true;
     }
 
     void Update()
@@ -55,13 +51,11 @@ public class GameManager : MonoBehaviour
         //Carica la scena del menu  all'avvio del gioco
         if (currentScene.ToString() == "Menu")
         {
-            //_player.GetComponent<FirstPersonCharacterController>().enabled = false;
         }
 
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
         if (currentScene.ToString() == "Theatre")
         {
-            //_player.GetComponent<FirstPersonCharacterController>().enabled = true;
         }
     }
 

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         //     Destroy(gameObject);
         // }
 
-        currentScene = SceneLoader.Scene.Menu;
+        // currentScene = SceneLoader.Scene.Menu;
 
     }
     

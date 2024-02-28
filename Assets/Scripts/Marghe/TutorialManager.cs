@@ -9,11 +9,20 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject _interactCanva;
     [SerializeField] private GameObject _grabCanva;
 
+    [SerializeField] private GameObject _director;
+    [SerializeField] private GameObject _tablet;
+
+
+    void Awake()
+    {
+        // _director.GetComponent<BoxCollider>.enabled = false;
+        // _tablet.SetActive(false);
+    }
 
     // Start is called before the first frame update
     public void Start()
     {
-    
+        
     }
 
     // Update is called once per frame

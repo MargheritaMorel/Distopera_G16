@@ -45,6 +45,7 @@ public class Tablet : MonoBehaviour
     private float vestitoScelto;
     private bool oggettiCompleto = false;
     private bool luciAccese = false;
+    private bool vestitiOk = false;
 
 
 
@@ -72,9 +73,9 @@ public class Tablet : MonoBehaviour
              _textTask1.text = "SCENOGRAFIA COMPLETATO 4/4";
              panelTask1 = panelTask1.GetComponent<Image>();
              panelTask1.color = UnityEngine.Color.green;
+             task1Scompare.Invoke();
             _toggleTask1.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
-            task1Scompare.Invoke();
         }
     }
 
@@ -97,37 +98,38 @@ public class Tablet : MonoBehaviour
 
     public void CheckLuciAccese()
     {   
-        if(luceAccesa == 1){
+        if(luceAccesa == 1 &&  oggettiCompleto == true){
             _textTask2.text = "LUCI 1/3";
         }
-        if(luceAccesa == 2){
+        if(luceAccesa == 2 && oggettiCompleto == true){
             _textTask2.text = "LUCI 2/3";
         }
-        if(luceAccesa == 3){
+        if(luceAccesa == 3 && oggettiCompleto == true){
             _textTask2.text = "LUCI COMPLETATO 3/3";
              panelTask2 = panelTask2.GetComponent<Image>();
+             _toggleTask2.isOn = true;
              panelTask2.color = UnityEngine.Color.green;
-            _toggleTask2.isOn = true;
+            task2Scompare.Invoke();
             _canvasTask3.gameObject.SetActive(true);
             _textTask3.gameObject.SetActive(true);
-            task2Scompare.Invoke();
         }
 
         if (luceAccesa == 3) luciAccese = true;
     }
 
     public void CheckVestiti(){
-        if(vestitoVerificato == 1){
+        if(vestitoVerificato == 1  && luciAccese == true){
             _textTask3.text = "VESTITI 1/2";
         }
-        if(vestitoVerificato == 2){
+        if(vestitoVerificato == 2 && luciAccese == true){
             _textTask3.text = "VESTITI COMPLETATO 2/2";
              panelTask3 = panelTask3.GetComponent<Image>();
              panelTask3.color = UnityEngine.Color.green;
              _toggleTask3.isOn = true;
+             task3Scompare.Invoke();
             _canvasTask4.gameObject.SetActive(true);
             _textTask4.gameObject.SetActive(true);
-            task3Scompare.Invoke();
+            vestitiOk = true;
         }
 
     }

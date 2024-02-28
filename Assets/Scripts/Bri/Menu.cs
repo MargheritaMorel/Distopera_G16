@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
      [SerializeField] private Canvas _menu;
+     [SerializeField] private Image _menuPanel;
     public bool isOpen = false;
 
     // Start is called before the first frame update
@@ -20,15 +22,17 @@ public class Menu : MonoBehaviour
     }
 
     public void OpenCanvas()
-    {
-        _menu.gameObject.SetActive(true);
+    {   
         isOpen = true;
+        _menu.gameObject.SetActive(true);
+        _menuPanel.gameObject.SetActive(true);
 
     }
 
     public void CloseCanvas()
     {
-        _menu.gameObject.SetActive(false);
         isOpen = false;
+        _menuPanel.gameObject.SetActive(false);
+         _menu.gameObject.SetActive(false);
     }
 }

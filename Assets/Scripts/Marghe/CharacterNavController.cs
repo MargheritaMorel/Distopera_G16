@@ -28,6 +28,11 @@ public class CharacterNavController : MonoBehaviour
         {
             _animator.SetBool("isArrived", true);
         }
+
+        // if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+        // {
+        //     _navMeshAgent.speed = 0;
+        // }
     }
 
     private bool TargetReached()

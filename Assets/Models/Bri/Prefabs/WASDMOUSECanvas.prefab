@@ -8,9 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1461412358193190925, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3258644404913037969}
     - target: {fileID: 3182235209896180006, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
       propertyPath: m_Name
-      value: LuciCanvas
+      value: WASDMOUSECanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302704693945526247, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+      propertyPath: m_text
+      value: Utilizza i tasti W A S D o le frecce per muoverti nell'ambiente e il
+        mouse per cambiare il punto di vista
       objectReference: {fileID: 0}
     - target: {fileID: 7554356140597425133, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
       propertyPath: m_Pivot.x
@@ -92,8 +101,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8820484808681960735, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+      propertyPath: m_Name
+      value: wasdMouse
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+--- !u!1 &3258644404913037969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182235209896180006, guid: 5c2b0914d9c8a0944ab1c389c5cc17ad, type: 3}
+  m_PrefabInstance: {fileID: 76725854419147703}
+  m_PrefabAsset: {fileID: 0}

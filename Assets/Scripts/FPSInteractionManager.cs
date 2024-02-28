@@ -241,6 +241,7 @@ public class FPSInteractionManager : MonoBehaviour
                 oggetto._snappoint.isUsed = false;
                 oggetto._snappoint.gameObject.SetActive(true);
                 oggetto._snappoint = null;
+                oggetto.setFreedom();
             }
             oggetto._isPlaced = false;
         }
@@ -290,6 +291,7 @@ public class FPSInteractionManager : MonoBehaviour
             oggetto.setOriginalRotation();
             oggetto._isPlaced = true;
             oggetto._snappoint = closestSnapPoint;
+            oggetto.setFreeze();
             oggetto._snappoint.isUsed = true;
             _tablet.oggettoScenaPiazzato++;
             _tablet.CheckOggettiScena();

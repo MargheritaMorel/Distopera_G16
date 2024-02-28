@@ -3963,7 +3963,7 @@ Transform:
   m_LocalScale: {x: -5.6561084, y: 0.6791309, z: 3.5524683}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 92397121}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 62.693, z: 0}
 --- !u!108 &103278941
 Light:
@@ -13756,6 +13756,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd276a94bb8cbca45b97e9f1575e6adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerSoundOn: {fileID: 0}
+  wasdCanvas: {fileID: 0}
+  interactCanvas: {fileID: 0}
+  grabCanvas: {fileID: 0}
+  tablet: {fileID: 0}
+  director: {fileID: 0}
+  door: {fileID: 0}
 --- !u!65 &282793511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20281,7 +20288,7 @@ Transform:
   m_LocalScale: {x: -5.6561084, y: 0.6791309, z: 3.5524683}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2137129938}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 62.693, z: 0}
 --- !u!108 &450471845
 Light:
@@ -21504,6 +21511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e71866663c7472988324c29eac16a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MixerGenerale: {fileID: 0}
 --- !u!1 &481647295
 GameObject:
   m_ObjectHideFlags: 0
@@ -29840,6 +29848,7 @@ Transform:
   - {fileID: 909280698}
   - {fileID: 1259650558}
   - {fileID: 1907012708}
+  - {fileID: 2071281961}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &676611355
@@ -42938,7 +42947,7 @@ Transform:
   m_LocalScale: {x: -5.6561084, y: 0.6791309, z: 3.5524683}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1645275585}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 62.693, z: 0}
 --- !u!108 &953427092
 Light:
@@ -55845,8 +55854,7 @@ Transform:
   m_LocalPosition: {x: 12.2, y: -28.28, z: 28.7}
   m_LocalScale: {x: -0.1768, y: 1.4724703, z: 0.2814945}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1290445764}
+  m_Children: []
   m_Father: {fileID: 2071281961}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!136 &1224453001
@@ -66957,6 +66965,9 @@ MonoBehaviour:
   _canvasTask2: {fileID: 1522378874}
   _canvasTask3: {fileID: 1790107728}
   _canvasTask4: {fileID: 33868658}
+  avanzaTask: {fileID: 0}
+  completoTask: {fileID: 0}
+  nuovoTask: {fileID: 0}
   task1Scompare:
     m_PersistentCalls:
       m_Calls:
@@ -78328,6 +78339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3002b8cb9ceac48d095d4f69459e64b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MixerGenerale: {fileID: 0}
 --- !u!1001 &1714807263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78691,7 +78703,6 @@ MonoBehaviour:
   _canvasGroupLoading: {fileID: 1274876124}
   currentScene: 1
   _player: {fileID: 1183565170}
-  tutorialManager: {fileID: 0}
 --- !u!1 &1721319904
 GameObject:
   m_ObjectHideFlags: 0
@@ -81042,8 +81053,7 @@ Transform:
   m_LocalPosition: {x: -17.72, y: -33.39, z: 125.3}
   m_LocalScale: {x: -0.1768, y: 1.4724703, z: 0.2814945}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1684167946}
+  m_Children: []
   m_Father: {fileID: 2071281961}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!136 &1778469381
@@ -86456,7 +86466,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 5344464666902739212, guid: d64f214e682684799a800f4c131bfa3d, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 3b3fa93a2f1704d12bbdebef8386f74a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bf3b933c890b345b682d88b6eb467e38, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -86502,7 +86512,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.684
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -89847,7 +89857,6 @@ MonoBehaviour:
   unpressedColor: {r: 0.94509804, g: 0.039215688, b: 0.039215688, a: 1}
   pressedColor: {r: 0.94509804, g: 0.039215688, b: 0.039215688, a: 0.4745098}
   _light: {fileID: 1639798245}
-  _faro: {fileID: 0}
   evento:
     m_PersistentCalls:
       m_Calls:
@@ -89872,30 +89881,6 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SiparioInterfaccia
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 129373116}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: SiparioInterfaccia
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1662568456}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayDelayed
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 40
           m_StringArgument: SiparioInterfaccia
           m_BoolArgument: 0
         m_CallState: 2
@@ -91576,6 +91561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63912d9364d9bb4d84d8279810d83c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCPublic: {fileID: 0}
 --- !u!4 &2003988950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5449155083798339082, guid: 6272a15eaf06c4d4a849f8e38824bd49, type: 3}
@@ -93531,15 +93517,12 @@ Transform:
   m_Children:
   - {fileID: 330483547}
   - {fileID: 2052541770}
-  - {fileID: 2137129938}
   - {fileID: 1600142805}
   - {fileID: 1325131075}
   - {fileID: 1224453000}
   - {fileID: 53539812}
   - {fileID: 2126194228}
   - {fileID: 490805886}
-  - {fileID: 92397121}
-  - {fileID: 1645275585}
   - {fileID: 1802963173}
   - {fileID: 1036742199}
   - {fileID: 997719118}
@@ -93548,7 +93531,6 @@ Transform:
   - {fileID: 1778469380}
   - {fileID: 477358814}
   - {fileID: 255501453}
-  - {fileID: 1461641191}
   m_Father: {fileID: 676520147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073004472
@@ -96933,4 +96915,6 @@ SceneRoots:
   - {fileID: 979733185}
   - {fileID: 1584332192}
   - {fileID: 980287427}
-  - {fileID: 1584332192}
+  - {fileID: 103278940}
+  - {fileID: 450471844}
+  - {fileID: 953427091}

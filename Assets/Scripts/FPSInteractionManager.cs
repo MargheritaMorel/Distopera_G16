@@ -29,6 +29,8 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private AudioSource audioGrab;
     [SerializeField] private AudioSource audioDrop;
     [SerializeField] private AudioSource tabletSound;
+    [SerializeField] private AudioSource popUp;
+    [SerializeField] private AudioSource popDown;
     
     
 
@@ -93,8 +95,13 @@ public class FPSInteractionManager : MonoBehaviour
             if (_menu.isOpen)
             {
                 _menu.CloseCanvas();
+                popDown.Play();
             }
-            else _menu.OpenCanvas();
+            else 
+            {
+                _menu.OpenCanvas();
+                popUp.Play();
+            }
         }
 
         UpdateUITarget();
@@ -241,6 +248,7 @@ public class FPSInteractionManager : MonoBehaviour
                 oggetto._snappoint.isUsed = false;
                 oggetto._snappoint.gameObject.SetActive(true);
                 oggetto._snappoint = null;
+                oggetto.setFreedom();
             }
             oggetto._isPlaced = false;
         }
@@ -290,6 +298,7 @@ public class FPSInteractionManager : MonoBehaviour
             oggetto.setOriginalRotation();
             oggetto._isPlaced = true;
             oggetto._snappoint = closestSnapPoint;
+            oggetto.setFreeze();
             oggetto._snappoint.isUsed = true;
             _tablet.oggettoScenaPiazzato++;
             _tablet.CheckOggettiScena();

@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class CharacterNavController : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
-    [SerializeField] private GameObject _target;
-    [SerializeField] private Animator _animator;
+    public Camera camera;
+    public GameObject target;
+    public Animator animator;
 
     private NavMeshAgent _navMeshAgent;
 
@@ -18,7 +18,12 @@ public class CharacterNavController : MonoBehaviour
 
     void Update()
     {
-        _navMeshAgent.SetDestination(_target.transform.position);
+        _navMeshAgent.SetDestination(target.transform.position);
+        if(TargetReached() == true)
+        {
+            Debug.Log("NPC arrivato al suo posto");
+            animator.SetBool("isArrived", true);
+        }
     }
 
     private bool TargetReached()

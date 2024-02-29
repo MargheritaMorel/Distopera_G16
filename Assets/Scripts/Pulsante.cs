@@ -30,7 +30,18 @@ public class Pulsante : MonoBehaviour
     private float initialLocalYPos;
     public UnityEvent evento;
     public UnityEvent evento1;
+    public Animator _animator1;
+    public Animator _animator2;
+    public Animator _animator3;
+    public Animator _animator4;
+    public Animator _animator5;
+    public Animator _animator6;
+    public Animator _animator7;
+    public Animator _animator8;
+    public Animator _animator9;
+    public Animator _animator10;
 
+    public bool siparioChiuso = false;
 
     void Start()
     {
@@ -42,10 +53,13 @@ public class Pulsante : MonoBehaviour
             renderer.material.color = unpressedColor;
         currentTime = TimeAmount;
 
+        //_animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        //siparioChiuso = false;
+
         if (_esciAttori == true)
         {
             currentTime -= Time.deltaTime;
@@ -58,8 +72,27 @@ public class Pulsante : MonoBehaviour
                 attrice.SetActive(false);
                 currentTime = TimeAmount;
                 _esciAttori = false;
+                siparioChiuso = true;
+                _animator1.SetBool("siparioChiuso", siparioChiuso);
+                _animator2.SetBool("siparioChiuso", siparioChiuso);
+                _animator3.SetBool("siparioChiuso", siparioChiuso);
+                _animator4.SetBool("siparioChiuso", siparioChiuso);
+                _animator5.SetBool("siparioChiuso", siparioChiuso);
+                _animator6.SetBool("siparioChiuso", siparioChiuso);
+                _animator7.SetBool("siparioChiuso", siparioChiuso);
+                _animator8.SetBool("siparioChiuso", siparioChiuso);
+                _animator9.SetBool("siparioChiuso", siparioChiuso);
+                _animator10.SetBool("siparioChiuso", siparioChiuso);
+
+                // _animator1.SetBool("siparioChiuso", false);
+                // _animator2.SetBool("siparioChiuso", false);
+                // _animator3.SetBool("siparioChiuso", false);
+                // _animator4.SetBool("siparioChiuso", false);
+                // _animator5.SetBool("siparioChiuso", false);
             }
         }
+
+
     }
 
     public void Press()

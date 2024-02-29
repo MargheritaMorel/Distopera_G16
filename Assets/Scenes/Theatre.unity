@@ -59620,7 +59620,7 @@ PrefabInstance:
     - target: {fileID: 114118422040144828, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
       propertyPath: _target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 681513451}
     - target: {fileID: 114118422040144828, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
       propertyPath: popDown
       value: 
@@ -75988,9 +75988,6 @@ MonoBehaviour:
   _canvasTask2: {fileID: 1522378874}
   _canvasTask3: {fileID: 1790107728}
   _canvasTask4: {fileID: 33868658}
-  avanzaTask: {fileID: 0}
-  completoTask: {fileID: 0}
-  nuovoTask: {fileID: 0}
   task1Scompare:
     m_PersistentCalls:
       m_Calls:

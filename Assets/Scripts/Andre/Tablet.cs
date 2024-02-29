@@ -32,10 +32,10 @@ public class Tablet : MonoBehaviour
     [SerializeField] private Canvas _canvasTask3;
     [SerializeField] private Canvas _canvasTask4;
 
-    [Header("Sorgenti Audio")]
+   /* [Header("Sorgenti Audio")]
     [SerializeField] AudioSource avanzaTask;
     [SerializeField] AudioSource completoTask;
-    [SerializeField] AudioSource nuovoTask;
+    [SerializeField] AudioSource nuovoTask; */
     
 
 
@@ -67,15 +67,15 @@ public class Tablet : MonoBehaviour
     {
         if(oggettoScenaPiazzato == 1){
             _textTask1.text = "SCENOGRAFIA 1/4";
-            avanzaTask.Play();
+           // avanzaTask.Play();
         }
         if(oggettoScenaPiazzato == 2){
             _textTask1.text = "SCENOGRAFIA 2/4";
-            avanzaTask.Play();
+           // avanzaTask.Play();
         }
         if(oggettoScenaPiazzato == 3){
             _textTask1.text = "SCENOGRAFIA 3/4";
-            avanzaTask.Play();
+           // avanzaTask.Play();
         }
         if (oggettoScenaPiazzato == 4)
         {
@@ -83,11 +83,11 @@ public class Tablet : MonoBehaviour
              _textTask1.text = "SCENOGRAFIA COMPLETATO 4/4";
              panelTask1 = panelTask1.GetComponent<Image>();
              panelTask1.color = UnityEngine.Color.green;
-             completoTask.Play();
+            // completoTask.Play();
              task1Scompare.Invoke();
             _toggleTask1.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
-            nuovoTask.Play();
+           // nuovoTask.Play();
         }
     }
 
@@ -112,11 +112,11 @@ public class Tablet : MonoBehaviour
     {   
         if(luceAccesa == 1 &&  oggettiCompleto == true){
             _textTask2.text = "LUCI 1/3";
-            avanzaTask.Play();
+            //avanzaTask.Play();
         }
         if(luceAccesa == 2 && oggettiCompleto == true){
             _textTask2.text = "LUCI 2/3";
-            avanzaTask.Play();
+            //avanzaTask.Play();
             
         }
         if(luceAccesa == 3 && oggettiCompleto == true){
@@ -124,11 +124,11 @@ public class Tablet : MonoBehaviour
              panelTask2 = panelTask2.GetComponent<Image>();
              _toggleTask2.isOn = true;
              panelTask2.color = UnityEngine.Color.green;
-             completoTask.Play();
+            // completoTask.Play();
             task2Scompare.Invoke();
             _canvasTask3.gameObject.SetActive(true);
             _textTask3.gameObject.SetActive(true);
-            nuovoTask.Play();
+           // nuovoTask.Play();
         }
 
         if (luceAccesa == 3) luciAccese = true;
@@ -137,16 +137,16 @@ public class Tablet : MonoBehaviour
     public void CheckVestiti(){
         if(vestitoVerificato == 1  && luciAccese == true){
             _textTask3.text = "VESTITI 1/2";
-            avanzaTask.Play();
+            //avanzaTask.Play();
         }
         if(vestitoVerificato == 2 && luciAccese == true){
             _textTask3.text = "VESTITI COMPLETATO 2/2";
              panelTask3 = panelTask3.GetComponent<Image>();
              panelTask3.color = UnityEngine.Color.green;
              _toggleTask3.isOn = true;
-             completoTask.Play();
+            // completoTask.Play();
              task3Scompare.Invoke();
-             nuovoTask.Play();
+            // nuovoTask.Play();
              _canvasTask4.gameObject.SetActive(true);
              _textTask4.gameObject.SetActive(true);
              vestitiOk = true;

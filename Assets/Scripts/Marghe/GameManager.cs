@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject _player;
 
     private bool _tutorialIsDone = false;
-    
+    private bool _firstTime = false;
+
     void Awake()
     {
         if (instance == null)
@@ -41,10 +42,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //Carica la scena del gioco quando si preme il tasto spazio
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _firstTime==false)
         {
             // canvasGroupLoading.enabled = true;
             _loadingScreen.SetActive(true);
+            _firstTime = true;
             StartCoroutine(LoadScene("Theatre"));
         }
 

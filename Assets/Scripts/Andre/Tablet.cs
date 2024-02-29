@@ -21,7 +21,7 @@ public class Tablet : MonoBehaviour
 
     [SerializeField] private Image panelTask1;
     [SerializeField] private Image panelTask2;
-     [SerializeField] private Image panelTask3;
+    [SerializeField] private Image panelTask3;
     
 
     [SerializeField] private Canvas _canvasTabletUI;

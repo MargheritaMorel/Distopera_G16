@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
     [SerializeField] private float _openingTime = 1f;
     [SerializeField] private float _closingTime = 0.5f;
 
+    public Tablet _tablet;
+
     private bool _isRotating = false;
     private bool _isOpen = false;
     private Quaternion _originalRotation;
@@ -20,6 +22,19 @@ public class Door : MonoBehaviour
     private void Start()
     {
         _originalRotation = _doorHindge.transform.localRotation;
+        if(_tablet != null)
+        GetComponent<BoxCollider>().isTrigger = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (_tablet != null)
+        {
+            if (_tablet.vestitiOk == true && _tablet.oggettiCompleto == true && _tablet.luciAccese == true)
+                GetComponent<BoxCollider>().isTrigger = true;        
+        }
+
     }
 
     public void OpenDoor(float rotation)

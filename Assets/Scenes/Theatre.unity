@@ -15040,7 +15040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &265468853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24712,7 +24712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e71866663c7472988324c29eac16a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MixerGenerale: {fileID: 0}
+  MixerGenerale: {fileID: 24100000, guid: d64f214e682684799a800f4c131bfa3d, type: 2}
 --- !u!1 &481647295
 GameObject:
   m_ObjectHideFlags: 0
@@ -51803,7 +51803,7 @@ Transform:
   m_GameObject: {fileID: 1003856358}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.9404297, z: 0}
+  m_LocalPosition: {x: -10, y: -4.1, z: -317.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51828,11 +51828,11 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  DopplerLevel: 0
+  MinDistance: 6.1132812
+  MaxDistance: 47.33838
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -51865,7 +51865,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -76003,6 +76003,18 @@ MonoBehaviour:
           m_StringArgument: PanelTask1Completed
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 360477155}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PanelTask1Completed
+          m_BoolArgument: 0
+        m_CallState: 2
   task2Scompare:
     m_PersistentCalls:
       m_Calls:
@@ -76018,6 +76030,18 @@ MonoBehaviour:
           m_StringArgument: PanelTask2Completed
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 360477155}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PanelTask2Completed
+          m_BoolArgument: 0
+        m_CallState: 2
   task3Scompare:
     m_PersistentCalls:
       m_Calls:
@@ -76025,6 +76049,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PanelTask3Completed
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 360477155}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -88486,7 +88522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3002b8cb9ceac48d095d4f69459e64b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MixerGenerale: {fileID: 0}
+  MixerGenerale: {fileID: 24100000, guid: d64f214e682684799a800f4c131bfa3d, type: 2}
 --- !u!1001 &1714807263
 PrefabInstance:
   m_ObjectHideFlags: 0

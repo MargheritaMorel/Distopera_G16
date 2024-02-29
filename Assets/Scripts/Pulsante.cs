@@ -9,6 +9,8 @@ public class Pulsante : MonoBehaviour
     public Action OnButtonPressed;
     public GameObject attore;
     public GameObject attrice;
+    public GameObject fari_platea;
+    public GameObject luci_platea;
 
     public Transform movingPieceT;
     public float localYFinalPressedPos;
@@ -21,7 +23,6 @@ public class Pulsante : MonoBehaviour
     public Color unpressedColor;
     public Color pressedColor;
     public Light _light;
-    [SerializeField] private GameObject _faro;
     private MeshRenderer renderer;
     private bool isPressed = false;
     private bool isOpened = false;
@@ -51,6 +52,8 @@ public class Pulsante : MonoBehaviour
 
             if (currentTime <= 0 && _esciAttori == true)
             {
+                fari_platea.SetActive(true);
+                luci_platea.SetActive(true);
                 attore.SetActive(false);
                 attrice.SetActive(false);
                 currentTime = TimeAmount;
@@ -79,8 +82,9 @@ public class Pulsante : MonoBehaviour
             isPressed = true;
             if (_light != null)
                 _light.gameObject.SetActive(true);
-            _faro.SetActive(false);
-            attore.SetActive(true);
+                fari_platea.SetActive(false);
+                luci_platea.SetActive(false);
+                attore.SetActive(true);
             attrice.SetActive(true);
 
                 if (!isOpened)
@@ -103,7 +107,6 @@ public class Pulsante : MonoBehaviour
             pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, pressDuration).OnComplete(() =>
             {
 
-                _faro.SetActive(true);
                 evento1.Invoke();
                 isOpened = false;
                 _esciAttori = true;

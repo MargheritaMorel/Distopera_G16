@@ -17,10 +17,7 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _jumpHeight = 3f;
     [SerializeField] private GameObject _initialPosition;
-    [SerializeField] private GameObject _player;
-
-    [SerializeField] private float stepFrequency = 0.5f;
-   
+    [SerializeField] private GameObject _player;  
    
    
 

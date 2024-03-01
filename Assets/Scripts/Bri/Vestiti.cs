@@ -13,6 +13,9 @@ public class Vestiti : MonoBehaviour
     
     public UnityEvent evento;
     public UnityEvent evento1;
+    
+    public bool belle = false;
+    public bool dan = false;
 
     [SerializeField] private Tablet _tablet;
    
@@ -39,8 +42,27 @@ public class Vestiti : MonoBehaviour
 
     }
 
-    public void VestitoBelleDan(){
-        _tablet.vestitoVerificato ++;
+    public void VestitoDan(){
+        dan = true;
+
+        if(belle==false){
+            _tablet.vestitoVerificato = 1;
+        }
+        if(belle==true){
+            _tablet.vestitoVerificato = 2;
+        }
+         _tablet.CheckVestiti();
+    }
+
+    public void VestitoBelle(){
+        belle = true;
+        
+        if(dan==false){
+            _tablet.vestitoVerificato = 1;
+        }
+        if(dan==true){
+            _tablet.vestitoVerificato = 2;
+        }
          _tablet.CheckVestiti();
     }
 

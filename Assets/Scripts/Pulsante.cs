@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
 using System;
+using UnityEngine.UI;
 public class Pulsante : MonoBehaviour
 {
     public Action OnButtonPressed;
@@ -30,7 +31,22 @@ public class Pulsante : MonoBehaviour
     private float initialLocalYPos;
     public UnityEvent evento;
     public UnityEvent evento1;
+    public Animator _animator1;
+    public Animator _animator2;
+    public Animator _animator3;
+    public Animator _animator4;
+    public Animator _animator5;
+    public Animator _animator6;
+    public Animator _animator7;
+    public Animator _animator8;
+    public Animator _animator9;
+    public Animator _animator10;
 
+    public bool siparioChiuso = false;
+
+    public Canvas canvasMenu;
+    public Image _menuPanel;
+    //public bool spettacoloFinito;
 
     void Start()
     {
@@ -42,10 +58,15 @@ public class Pulsante : MonoBehaviour
             renderer.material.color = unpressedColor;
         currentTime = TimeAmount;
 
+        //_animator = GetComponent<Animator>();
+        //spettacoloFinito = false;
     }
 
     void Update()
     {
+        //siparioChiuso = false;
+
+
         if (_esciAttori == true)
         {
             currentTime -= Time.deltaTime;
@@ -58,8 +79,30 @@ public class Pulsante : MonoBehaviour
                 attrice.SetActive(false);
                 currentTime = TimeAmount;
                 _esciAttori = false;
+                siparioChiuso = true;
+                _animator1.SetBool("siparioChiuso", siparioChiuso);
+                _animator2.SetBool("siparioChiuso", siparioChiuso);
+                _animator3.SetBool("siparioChiuso", siparioChiuso);
+                _animator4.SetBool("siparioChiuso", siparioChiuso);
+                _animator5.SetBool("siparioChiuso", siparioChiuso);
+                _animator6.SetBool("siparioChiuso", siparioChiuso);
+                _animator7.SetBool("siparioChiuso", siparioChiuso);
+                _animator8.SetBool("siparioChiuso", siparioChiuso);
+                _animator9.SetBool("siparioChiuso", siparioChiuso);
+                _animator10.SetBool("siparioChiuso", siparioChiuso);
+
+                //spettacoloFinito = true;
+                canvasMenu.gameObject.SetActive(true);
+                _menuPanel.gameObject.SetActive(true);
+
             }
         }
+
+        //if(spettacoloFinito == true)
+        //{
+        //}
+        
+
     }
 
     public void Press()

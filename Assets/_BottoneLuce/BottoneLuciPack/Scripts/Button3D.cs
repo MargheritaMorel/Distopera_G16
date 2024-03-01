@@ -19,7 +19,6 @@ public class Button3D : MonoBehaviour
 
     private MeshRenderer renderer;
     private bool isPressed = false;
-    private bool isOpened = false;
     private float initialLocalYPos;
    
 

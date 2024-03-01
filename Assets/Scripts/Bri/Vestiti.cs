@@ -66,4 +66,9 @@ public class Vestiti : MonoBehaviour
          _tablet.CheckVestiti();
     }
 
+    public void VestitoBelleDan(){
+         _tablet.vestitoVerificato++;
+          _tablet.CheckVestiti();
+    }
+
 }

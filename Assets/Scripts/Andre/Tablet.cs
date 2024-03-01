@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using TMPro;
-using Unity.VisualScripting.Dependencies.Sqlite;
+//using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -50,15 +50,21 @@ public class Tablet : MonoBehaviour
     public float luceAccesa;
     public float vestitoVerificato;
     private float vestitoScelto;
-    private bool oggettiCompleto = false;
-    private bool luciAccese = false;
-    private bool vestitiOk = false;
+    public bool oggettiCompleto = false;
+    public bool luciAccese = false;
+    public bool vestitiOk = false;
 
 
 
 
     // Start is called before the first frame update
     void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
 
     }
@@ -87,6 +93,7 @@ public class Tablet : MonoBehaviour
              task1Scompare.Invoke();
             _toggleTask1.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
+            
            // nuovoTask.Play();
         }
     }
@@ -155,9 +162,5 @@ public class Tablet : MonoBehaviour
 
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-    
-    }
+
 }

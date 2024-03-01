@@ -17,10 +17,7 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _jumpHeight = 3f;
     [SerializeField] private GameObject _initialPosition;
-    [SerializeField] private GameObject _player;
-
-    [SerializeField] private float stepFrequency = 0.5f;
-   
+    [SerializeField] private GameObject _player;  
    
    
 
@@ -40,6 +37,8 @@ public class FirstPersonCharacterController : MonoBehaviour
     private Vector3 _velocity;
     private bool _isGrounded;
     private string currentFloorTag = "";
+    private Vector3 _actualPosition ;
+    private Vector3 _pastPosition ;
     
 
 
@@ -52,13 +51,16 @@ public class FirstPersonCharacterController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         _player.transform.position = _initialPosition.transform.position;
+        _actualPosition = _player.transform.position;
 
-        
+
     }
 
 
     void Update()
     {
+        _actualPosition = _player.transform.position;
+        
         UpdateCursor();
 
         if(Cursor.lockState == CursorLockMode.None)
@@ -108,7 +110,12 @@ public class FirstPersonCharacterController : MonoBehaviour
         _velocity.y += _gravity * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
 
-        PlayFootstepSound();
+        //se posizione cambia, avvio il suono dei passi
+        if (_actualPosition != _pastPosition)
+        {
+            _pastPosition = _actualPosition;
+            PlayFootstepSound();
+        }
 
 
         

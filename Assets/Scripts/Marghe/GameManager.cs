@@ -41,15 +41,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // //Carica la scena del gioco quando si preme il tasto spazio
-        // if (Input.GetKeyDown(KeyCode.Space)) //&& _firstTime==false
-        // {
-        //     // canvasGroupLoading.enabled = true;
-        //     _loadingScreen.SetActive(true);
-        //     //_firstTime = true;
-        //     StartCoroutine(LoadScene("Theatre"));
-        // }
-
         //Carica la scena del menu  all'avvio del gioco
         if (currentScene.ToString() == "Menu")
         {

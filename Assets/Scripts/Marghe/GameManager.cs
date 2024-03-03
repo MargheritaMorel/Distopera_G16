@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject _player;
 
     private bool _tutorialIsDone = false;
-    private bool _firstTime = false;
+    //private bool _firstTime = false;
 
     void Awake()
     {
@@ -41,18 +41,17 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //Carica la scena del gioco quando si preme il tasto spazio
-        if (Input.GetKeyDown(KeyCode.Space) && _firstTime==false)
-        {
-            // canvasGroupLoading.enabled = true;
-            _loadingScreen.SetActive(true);
-            _firstTime = true;
-            StartCoroutine(LoadScene("Theatre"));
-        }
-
         //Carica la scena del menu  all'avvio del gioco
         if (currentScene.ToString() == "Menu")
         {
+            //Carica la scena del gioco quando si preme il tasto spazio
+            if (Input.GetKeyDown(KeyCode.Space)) //&& _firstTime==false
+            {
+                // canvasGroupLoading.enabled = true;
+                _loadingScreen.SetActive(true);
+                //_firstTime = true;
+                StartCoroutine(LoadScene("Theatre"));
+            }
         }
 
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento

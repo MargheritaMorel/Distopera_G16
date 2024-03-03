@@ -31,6 +31,9 @@ public class Pulsante : MonoBehaviour
     private float initialLocalYPos;
     public UnityEvent evento;
     public UnityEvent evento1;
+
+
+    private float timePassed;
     public Animator _animator1;
     public Animator _animator2;
     public Animator _animator3;
@@ -41,6 +44,7 @@ public class Pulsante : MonoBehaviour
     public Animator _animator8;
     public Animator _animator9;
     public Animator _animator10;
+    public AudioSource applause;
 
     public bool siparioChiuso = false;
 
@@ -80,6 +84,7 @@ public class Pulsante : MonoBehaviour
                 currentTime = TimeAmount;
                 _esciAttori = false;
                 siparioChiuso = true;
+                applause.Play();
                 _animator1.SetBool("siparioChiuso", siparioChiuso);
                 _animator2.SetBool("siparioChiuso", siparioChiuso);
                 _animator3.SetBool("siparioChiuso", siparioChiuso);
@@ -91,18 +96,12 @@ public class Pulsante : MonoBehaviour
                 _animator9.SetBool("siparioChiuso", siparioChiuso);
                 _animator10.SetBool("siparioChiuso", siparioChiuso);
 
-                //spettacoloFinito = true;
+                StartCoroutine(WaitForSeconds(2));
+
                 canvasMenu.gameObject.SetActive(true);
                 _menuPanel.gameObject.SetActive(true);
-
             }
-        }
-
-        //if(spettacoloFinito == true)
-        //{
-        //}
-        
-
+        }        
     }
 
     public void Press()
@@ -185,5 +184,10 @@ public class Pulsante : MonoBehaviour
             if (renderer != null)
                 renderer.material.color = unpressedColor;
         });*/
+    }
+
+    IEnumerator WaitForSeconds(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }

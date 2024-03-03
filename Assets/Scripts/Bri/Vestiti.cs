@@ -10,6 +10,7 @@ public class Vestiti : MonoBehaviour
     public Action OnButtonPressed;
     public Action OnButtonClosed;
     public bool isClicked = false;
+    [SerializeField] private Vestiti _vestitoBelleODan;
     
     public UnityEvent evento;
     public UnityEvent evento1;
@@ -44,6 +45,7 @@ public class Vestiti : MonoBehaviour
 
     public void VestitoDan(){
         dan = true;
+        _vestitoBelleODan.dan = true;
 
         if(belle==false){
             _tablet.vestitoVerificato = 1;
@@ -56,6 +58,7 @@ public class Vestiti : MonoBehaviour
 
     public void VestitoBelle(){
         belle = true;
+        _vestitoBelleODan.belle = true;
         
         if(dan==false){
             _tablet.vestitoVerificato = 1;

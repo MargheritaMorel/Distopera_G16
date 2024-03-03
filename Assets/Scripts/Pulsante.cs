@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
 using System;
+using UnityEngine.UI;
 public class Pulsante : MonoBehaviour
 {
     public Action OnButtonPressed;
@@ -43,6 +44,10 @@ public class Pulsante : MonoBehaviour
 
     public bool siparioChiuso = false;
 
+    public Canvas canvasMenu;
+    public Image _menuPanel;
+    //public bool spettacoloFinito;
+
     void Start()
     {
         initialLocalYPos = movingPieceT.localPosition.y;
@@ -54,11 +59,13 @@ public class Pulsante : MonoBehaviour
         currentTime = TimeAmount;
 
         //_animator = GetComponent<Animator>();
+        //spettacoloFinito = false;
     }
 
     void Update()
     {
         //siparioChiuso = false;
+
 
         if (_esciAttori == true)
         {
@@ -84,14 +91,17 @@ public class Pulsante : MonoBehaviour
                 _animator9.SetBool("siparioChiuso", siparioChiuso);
                 _animator10.SetBool("siparioChiuso", siparioChiuso);
 
-                // _animator1.SetBool("siparioChiuso", false);
-                // _animator2.SetBool("siparioChiuso", false);
-                // _animator3.SetBool("siparioChiuso", false);
-                // _animator4.SetBool("siparioChiuso", false);
-                // _animator5.SetBool("siparioChiuso", false);
+                //spettacoloFinito = true;
+                canvasMenu.gameObject.SetActive(true);
+                _menuPanel.gameObject.SetActive(true);
+
             }
         }
 
+        //if(spettacoloFinito == true)
+        //{
+        //}
+        
 
     }
 

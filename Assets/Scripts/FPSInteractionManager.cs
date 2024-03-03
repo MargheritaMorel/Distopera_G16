@@ -39,7 +39,6 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private float snapRange = 2f;
     private OggettoScena _oggettoScena = null;
 
-    private bool isTablet = false;
     [SerializeField] private FirstPersonCharacterController _fpsInventory;
     [SerializeField] private Tablet _tablet;
 
